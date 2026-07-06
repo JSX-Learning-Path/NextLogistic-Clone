@@ -50,7 +50,7 @@ const Header = () => {
                 Company
                 <span className="ml-1">▾</span>
               </button>
-              <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all absolute left-0 mt-2 w-156 bg-white shadow-lg rounded p-3 z-10 transition">
+              <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all absolute  mt-2 w-156 bg-white shadow-lg rounded p-3 z-10 transition">
                 <ul className="space-y-1 text-sm grid grid-cols-2 gap-5">
                   <li className="flex items-center gap-2 hover:bg-blue-100/50  p-2 rounded transition">
                     <span className="items-center gap-2 bg-blue-100/50 text-blue-400 p-2">
@@ -291,7 +291,10 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <Link href="/news" className="block py-1">
+            <Link
+              href="/news"
+              className="block py-1 text-sm font-bold text-gray-500"
+            >
               News
             </Link>
             <Link

@@ -7,21 +7,21 @@ export default function Footer() {
           {/* LEFT */}
           <div>
             <p className="text-sm uppercase tracking-widest font-semibold">
-              Изберете нас
+              Choose us
             </p>
 
             <div className="w-10 h-[2px] bg-white my-4" />
 
             <h2 className="text-3xl md:text-4xl font-bold leading-snug">
-              Доверете ни се за сигурни доставки и професионални логистични
-              решения
+              Trust us for secure deliveries and professional logistics
+              solutions
             </h2>
 
             <a
               href="/contact"
               className="inline-flex items-center gap-2 mt-8 text-white hover:opacity-80 transition"
             >
-              Свържете се с нас <span>›</span>
+              Contact us <span>›</span>
             </a>
           </div>
 
@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="flex flex-col md:items-end justify-between">
             <div>
               <h3 className="text-lg font-semibold">
-                Абонирай се за NEXT бюлетин
+               Subscribe to NEXT newsletter
               </h3>
 
               <div className="flex items-center mt-5 border-b border-white/60 pb-2 w-full md:w-[320px]">
@@ -73,10 +73,10 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-3">Компанията</h4>
           <ul className="space-y-2 text-white/80">
-            <li>Начало</li>
-            <li>За нас</li>
-            <li>Зелена логистика</li>
-            <li>Кариери</li>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Green Logistics</li>
+            <li>Careers</li>
           </ul>
         </div>
 

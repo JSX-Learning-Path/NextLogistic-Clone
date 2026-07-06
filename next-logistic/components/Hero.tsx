@@ -3,6 +3,7 @@ import Image from "next/image";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import DirectionsBoatFilledIcon from "@mui/icons-material/DirectionsBoatFilled";
 import DirectionsTransitFilledIcon from "@mui/icons-material/DirectionsTransitFilled";
+import DirectionsTransitIcon from "@mui/icons-material/DirectionsTransit";
 
 const Hero = () => {
   return (
@@ -19,25 +20,33 @@ const Hero = () => {
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
         {/* Stats like in image */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-10 text-sm md:text-base text-white/80">
+        <div className="md:mt-10 flex flex-wrap items-center justify-center gap-10 text-sm md:text-base text-white/80">
           <div className="flex items-center gap-2 pr-4 border-r border-white/80">
             <LocalShippingIcon
-              sx={{ fontSize: 45 }}
-              className="mx-auto mb-2 "
+              sx={{ fontSize: 35 }}
+              className="mx-auto mb-2 hover:scale-110 transition-transform duration-800"
             />
             <div className="pl-2">
-              <p className="text-2xl font-bold text-white">1500</p>
-              <p>TRUCKS</p>
+              <p className="text-sm font-bold text-white">1500</p>
+              <p className="text-sm">TRUCKS</p>
             </div>
             <div className="pl-2">
-              <p className="text-2xl font-bold text-white">3000</p>
-              <p>TRAILERS</p>
+              <p className="text-sm font-bold text-white">3000</p>
+              <p className="text-sm">TRAILERS</p>
             </div>
           </div>
 
-          <div className="text-center">
-            <p className="text-2xl font-bold text-white">170</p>
-            <p>ROUTES</p>
+          <div className="flex items-center text-center border-r border-white/80 pr-4">
+            <span>
+              <DirectionsBoatFilledIcon
+                sx={{ fontSize: 35 }}
+                className="mx-auto mb-2 hover:scale-110 transition-transform duration-800"
+              />
+            </span>
+            <div className="pl-2">
+              <p className="text-sm font-bold text-white">170</p>
+              <p className="text-sm">DIFFERENT ROUTES</p>
+            </div>
           </div>
 
           <div className="text-center">
