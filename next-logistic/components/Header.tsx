@@ -113,7 +113,7 @@ const Header = () => {
                 </ul>
               </div>
             </div>
-            <Link href="/news" className="block py-1">
+            <Link href="/news" className="block py-1 text-gray-700">
               News
             </Link>
             <Link href="/contact" className="block py-1">
