@@ -15,11 +15,20 @@ import EnergySavingsLeafIcon from "@mui/icons-material/EnergySavingsLeaf";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import DirectionsTransitFilledIcon from "@mui/icons-material/DirectionsTransitFilled";
 import DescriptionIcon from "@mui/icons-material/Description";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openCompany, setOpenCompany] = useState(false);
   const [transport, setOpenTransport] = useState(false);
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    setOpenCompany(false);
+    setOpenTransport(false);
+  };
+
   return (
     <header className="w-full bg-white shadow-md z-50">
       <nav className="max-w-7xl mx-auto flex justify-between items-center p-4 ">
@@ -307,7 +316,7 @@ const Header = () => {
         </div>
 
         {/* Right: socials */}
-        <div className="flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-3">
           <Link
             href="https://www.linkedin.com/company/nextlogistic/posts/"
             target="_blank"
@@ -336,77 +345,313 @@ const Header = () => {
             <InstagramIcon />
           </Link>
         </div>
+
+        {/* Mobile menu button */}
+        <div className="md:hidden ">
+          <button
+            type="button"
+            onClick={() => setMobileOpen((s) => !s)}
+            className="md:hidden inline-flex items-center justify-center p-2 text-gray-600"
+            aria-label="Toggle mobile menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
+          >
+            <MenuIcon />
+          </button>
+        </div>
       </nav>
-      {mobileOpen && (
-        <div className="md:hidden bg-white shadow-md">
-          <div className="p-4 space-y-3">
-            <div>
+      <div
+        id="mobile-menu"
+        className={`fixed inset-0 z-60 md:hidden ${
+          mobileOpen ? "pointer-events-auto" : "pointer-events-none"
+        }`}
+      >
+          <button
+            type="button"
+            className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ease-out ${
+              mobileOpen ? "opacity-100" : "opacity-0"
+            }`}
+            aria-label="Close menu backdrop"
+            onClick={closeMobileMenu}
+          />
+
+          <div
+            className={`relative h-full w-[92%] max-w-sm bg-slate-200 px-8 py-6 text-slate-600 shadow-xl transition-transform duration-300 ease-out ${
+              mobileOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
+            <div className="mb-8 flex justify-end ">
               <button
-                onClick={() => setOpenCompany((s) => !s)}
-                className="w-full flex justify-between items-center"
+                type="button"
+                onClick={closeMobileMenu}
+                className="inline-flex items-center justify-center text-slate-700"
+                aria-label="Close mobile menu"
               >
-                Company<span className="ml-1">▾</span>
+                <CloseIcon sx={{ fontSize: 36 }} />
               </button>
-              {openCompany && (
-                <ul className="mt-2 space-y-1">
-                  <li>
-                    <Link href="/about" className="block py-1">
-                      About Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/team" className="block py-1">
-                      Our Team
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/careers" className="block py-1">
-                      Careers
-                    </Link>
-                  </li>
-                </ul>
-              )}
             </div>
-            <div>
-              <button
-                onClick={() => setOpenTransport((s) => !s)}
-                className="w-full flex justify-between items-center  font-bold text-gray-500"
-              >
-                Transport<span className="ml-1">▾</span>
-              </button>
-              {transport && (
-                <ul className="mt-2 space-y-1">
-                  <li>
-                    <Link href="/roadTransport" className="block py-1">
-                      Road Transport
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/railwayTransport" className="block py-1">
-                      Rail Transport
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/combinedTransport" className="block py-1">
-                      Combined Transport
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/containerTransport" className="block py-1">
-                      Container Transport
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/riverTransport" className="block py-1">
-                      River Transport
-                    </Link>
-                  </li>
-                </ul>
-              )}
+
+            <div className="space-y-6 text-[18px]  tracking-[0.01em]">
+              <Link href="/" onClick={closeMobileMenu} className="block">
+                Home
+              </Link>
+
+              <div className="">
+                <button
+                  onClick={() => setOpenCompany((s) => !s)}
+                  className="flex w-full items-center justify-between"
+                  aria-expanded={openCompany}
+                >
+                  Company
+                  <KeyboardArrowRightIcon
+                    className={
+                      openCompany
+                        ? "rotate-90 transition-transform duration-300 ease-out"
+                        : "transition-transform duration-300 ease-out"
+                    }
+                  />
+                </button>
+                <div
+                  className={
+                    openCompany
+                      ? "grid grid-rows-[1fr] opacity-100 mt-2 transition-all duration-300 ease-out "
+                      : "grid grid-rows-[0fr] opacity-0 mt-0 transition-all duration-300 ease-out "
+                  }
+                >
+                  <ul className="overflow-hidden space-y-2 pl-1  bg-gray-100/50 py-2 rounded ">
+                    <li>
+                      <Link
+                        href="/about"
+                        onClick={closeMobileMenu}
+                        className="block  text-gray-700"
+                      >
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/academy"
+                        onClick={closeMobileMenu}
+                        className="block  text-gray-700"
+                      >
+                        Academy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/careers"
+                        onClick={closeMobileMenu}
+                        className="block  text-gray-700"
+                      >
+                        Careers
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/causes"
+                        onClick={closeMobileMenu}
+                        className="block  text-gray-700"
+                      >
+                        Causes
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/technology"
+                        onClick={closeMobileMenu}
+                        className="block  text-gray-700"
+                      >
+                        Technology
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/green-logistics"
+                        onClick={closeMobileMenu}
+                        className="block  text-gray-700"
+                      >
+                        Green Logistics
+                      </Link>
+                      <li>
+                        <Link
+                          href="/code-of-ethics"
+                          onClick={closeMobileMenu}
+                          className="block  text-gray-700"
+                        >
+                          Code of Ethics
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/human-right-policy"
+                          onClick={closeMobileMenu}
+                          className="block  text-gray-700"
+                        >
+                          Human right policy
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/logistic-sustainability-policy"
+                          onClick={closeMobileMenu}
+                          className="block  text-gray-700"
+                        >
+                          Logistic sustainability policy
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/diversity-and-inclusion-policy"
+                          onClick={closeMobileMenu}
+                          className="block  text-gray-700"
+                        >
+                          Diversity and Inclusion Policy
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/corporate-social-responsibility"
+                          onClick={closeMobileMenu}
+                          className="block  text-gray-700"
+                        >
+                          Corporate Social Responsibility {/*  */} (CSR) policy
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/academy"
+                          onClick={closeMobileMenu}
+                          className="block  text-gray-700"
+                        >
+                          Energy Management Policy
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/academy"
+                          onClick={closeMobileMenu}
+                          className="block  text-gray-700"
+                        >
+                          Environmental policy
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/academy"
+                          onClick={closeMobileMenu}
+                          className="block  text-gray-700"
+                        >
+                          Anti-Corruption and Anti-Bribery {/* */} Policy
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/academy"
+                          onClick={closeMobileMenu}
+                          className="block  text-gray-700"
+                        >
+                          Code of conduct for suppliers and {/* */} business
+                          partners
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/academy"
+                          onClick={closeMobileMenu}
+                          className="block  text-gray-700"
+                        >
+                          Report registration form
+                        </Link>
+                      </li>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <button
+                  onClick={() => setOpenTransport((s) => !s)}
+                  className="flex w-full items-center justify-between"
+                  aria-expanded={transport}
+                >
+                  Transport
+                  <KeyboardArrowRightIcon
+                    className={
+                      transport
+                        ? "rotate-90 transition-transform duration-300 ease-out"
+                        : "transition-transform duration-300 ease-out"
+                    }
+                  />
+                </button>
+                <div
+                  className={
+                    transport
+                      ? "grid grid-rows-[1fr] opacity-100 mt-2 transition-all duration-300 ease-out "
+                      : "grid grid-rows-[0fr] opacity-0 mt-0 transition-all duration-300 ease-out "
+                  }
+                >
+                  <ul className="overflow-hidden space-y-2 pl-1 bg-gray-100/50 py-2 rounded">
+                    <li>
+                      <Link
+                        href="/roadTransport"
+                        onClick={closeMobileMenu}
+                        className="block text-gray-700"
+                      >
+                        Road Transport
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/railwayTransport"
+                        onClick={closeMobileMenu}
+                        className="block text-gray-700"
+                      >
+                        Rail Transport
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/combinedTransport"
+                        onClick={closeMobileMenu}
+                        className="block text-gray-700"
+                      >
+                        Combined Transport
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/containerTransport"
+                        onClick={closeMobileMenu}
+                        className="block text-gray-700"
+                      >
+                        Container Transport
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/riverTransport"
+                        onClick={closeMobileMenu}
+                        className="block text-gray-700"
+                      >
+                        River Transport
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <Link href="/news" onClick={closeMobileMenu} className="block">
+                News
+              </Link>
+
+              <Link href="/contact" onClick={closeMobileMenu} className="block">
+                Contacts
+              </Link>
+
+              <p className="pt-4 text-2xl">🇧🇬</p>
             </div>
           </div>
         </div>
-      )}
     </header>
   );
 };
