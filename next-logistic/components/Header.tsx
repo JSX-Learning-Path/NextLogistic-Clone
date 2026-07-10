@@ -41,7 +41,7 @@ const Header = () => {
               alt="Nextlogistic"
               width={78}
               height={30}
-              className="md:block"
+              className="h-auto md:block"
             />
           </Link>
         </div>
