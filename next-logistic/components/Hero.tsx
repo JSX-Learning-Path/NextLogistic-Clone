@@ -34,11 +34,11 @@ const Hero = () => {
               />
             </span>
             <div className="pl-2">
-              <p className="text-sm font-bold text-white">1500</p>
+              <p className="font-bold text-white">1500</p>
               <p className="text-sm">TRUCKS</p>
             </div>
             <div className="pl-2">
-              <p className="text-sm font-bold text-white">3000</p>
+              <p className="font-bold text-white">3000</p>
               <p className="text-sm">TRAILERS</p>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Hero = () => {
               />
             </span>
             <div className="flex flex-col pl-3">
-              <p className="text-sm font-bold text-white">170</p>
+              <p className="font-bold text-white">170</p>
               <p className="text-sm">
                 <span className="block">DIFFERENT</span>
                 <span className="block">ROUTES</span>
@@ -80,11 +80,11 @@ const Hero = () => {
               />
             </span>
             <div className="pl-2">
-              <p className="text-sm font-bold text-white">35</p>
+              <p className="font-bold text-white">35</p>
               <p className="text-sm">LOCOMOTIVES</p>
             </div>
             <div className="pl-2">
-              <p className="text-sm font-bold text-white">805</p>
+              <p className="font-bold text-white">805</p>
               <p className="text-sm">WAGONS</p>
             </div>
           </div>
@@ -103,7 +103,7 @@ const Hero = () => {
               />
             </span>
             <div className="pl-3">
-              <p className="text-sm font-bold text-white">170</p>
+              <p className="font-bold text-white">170</p>
               <p className="text-sm">
                 <span className="block">DIFFERENT</span>
                 <span className="block">ROUTES</span>
@@ -125,11 +125,11 @@ const Hero = () => {
               />
             </span>
             <div className="pl-2">
-              <p className="text-sm font-bold text-white">35</p>
+              <p className=" font-bold text-white">35</p>
               <p className="text-sm">LOCOMOTIVES</p>
             </div>
             <div className="pl-2">
-              <p className="text-sm font-bold text-white">805</p>
+              <p className="font-bold text-white">805</p>
               <p className="text-sm">WAGONS</p>
             </div>
           </div>
