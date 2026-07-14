@@ -18,7 +18,7 @@ const platforms = [
 const mobileAndDesktopOS = [
   { id: "Android", value: 35 },
   { id: "iOS", value: 65 },
-];  
+];
 
 export default function PieClick() {
   const [itemData, setItemData] = React.useState<PieItemIdentifier>();

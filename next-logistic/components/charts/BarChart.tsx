@@ -23,7 +23,8 @@ const dataset = [
   { month: "Dec", seoul: 22 },
 ];
 
-const valueFormatter = (value: number) => `${value} mm`;
+const valueFormatter = (value: number | null) =>
+  `${value ?? 0} mm`;
 
 type TickParamsSelectorProps = {
   tickPlacement: "end" | "start" | "middle" | "extremities";
