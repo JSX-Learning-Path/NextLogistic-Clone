@@ -18,6 +18,7 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import ContactPage from "@/app/contact/page";
 // import "../app/hero.css";
 
 const Header = () => {
