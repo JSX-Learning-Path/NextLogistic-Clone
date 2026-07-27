@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev:server": "next dev",
-    "dev": "concurrently \"next dev || true\" \"wait-on http://localhost:3000 && open http://localhost:3000\"",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -22,13 +22,13 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/react": "19.2.17",
     "@types/react-dom": "^19",
+    "concurrently": "^8.2.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "concurrently": "^8.2.0",
     "wait-on": "^7.0.1"
   }
 }
