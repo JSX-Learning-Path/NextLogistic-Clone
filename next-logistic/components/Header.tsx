@@ -19,6 +19,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ContactPage from "@/app/contact/page";
+import SummarizeIcon from "@mui/icons-material/Summarize";
+
 // import "../app/hero.css";
 
 const Header = () => {
@@ -61,7 +63,7 @@ const Header = () => {
                 Company
                 <span className="ml-1">▾</span>
               </button>
-              <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all absolute  mt-2 w-156 bg-white shadow-lg rounded p-3 z-10 transition">
+              <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all absolute  mt-2 w-156 bg-white shadow-lg rounded p-3 z-10 ">
                 <ul className="space-y-1 text-sm grid grid-cols-2 gap-5">
                   <li className="flex items-center gap-2 hover:bg-blue-100/50  p-2 rounded transition">
                     <span className="items-center gap-2 bg-blue-100/50 text-blue-400 p-2">
@@ -161,6 +163,69 @@ const Header = () => {
                     </div>
                   </li>
                 </ul>
+                {/* Policies */}
+                <div className="grid grid-cols-2 gap-5 mt-3 bg-gray-100/50 p-5 rounded">
+                  <div className="flex items-center text-black text-sm">
+                    <Link href="/policies/code-of-ethics">
+                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
+                      Code of Ethics
+                    </Link>
+                  </div>
+                  <div className="flex items-center text-black text-sm">
+                    <Link href="/code-of-ethics">
+                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400 " />
+                      Human right policy
+                    </Link>
+                  </div>
+                  <div className="flex items-center text-black text-sm">
+                    <Link href="/code-of-ethics">
+                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
+                      Logistics sustainability policy
+                    </Link>
+                  </div>
+                  <div className="flex items-center text-black text-sm">
+                    <Link href="/code-of-ethics">
+                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
+                      Diversity and inclusion policy
+                    </Link>
+                  </div>
+                  <div className="flex items-center text-black text-sm">
+                    <Link href="/code-of-ethics">
+                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
+                      Corporate Social Responsibility (CSR) Policy
+                    </Link>
+                  </div>
+                  <div className="flex items-center text-black text-sm">
+                    <Link href="/code-of-ethics">
+                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
+                      Energy Management policy
+                    </Link>
+                  </div>
+                  <div className="flex items-center text-black text-sm">
+                    <Link href="/code-of-ethics">
+                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
+                      Environmental policy
+                    </Link>
+                  </div>
+                  <div className="flex items-center text-black text-sm">
+                    <Link href="/code-of-ethics">
+                      <SummarizeIcon className="w-2 h-5 mr-2 text-blue-400" />
+                      Anti-corruption and anti-bribery policy
+                    </Link>
+                  </div>
+                  <div className="flex items-center text-black text-sm">
+                    <Link href="/code-of-ethics">
+                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
+                      Environmental policy
+                    </Link>
+                  </div>
+                  <div className="flex items-center text-black text-sm">
+                    <Link href="/code-of-ethics">
+                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
+                      Environmental policy
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
 

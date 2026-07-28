@@ -19,9 +19,9 @@ function ContactPage() {
   };
 
   return (
-    <section className="bg-blue-50 ">
+    <section className="bg-blue-50  ">
       <div className="flex flex-col mt-25 gap-10 md:gap-20 items-center justify-center p-5 md:p-10 bg-blue-50 lg:flex-row lg:items-start lg:justify-center lg:gap-5">
-        <div className="bg-white w-full mx-5 p-5 rounded-lg lg:w-2/3 shadow-md ">
+        <div className="bg-white w-full mx-5 p-5 rounded-lg lg:w-1/3 shadow-md ">
           <h2 className="text-black text-xl mb-2 font-bold p-2">Contact us</h2>
           <div className="flex flex-col p-2">
             <p className="text-gray-700 text-lg ">
@@ -122,7 +122,7 @@ function ContactPage() {
               </div>
             </div>
           </div>
-          <div className="bg-white p-8 rounded-lg shadow-md w-full lg:w-full ">
+          <div className="bg-white p-8 rounded-lg shadow-md w-full lg:w-full lg:h-74">
             <h2 className="text-black mb-2 font-bold">Address</h2>
             <p className="text-gray-700 text-lg">
               36 Rogoshko Shose St., Plovdiv
@@ -135,7 +135,7 @@ function ContactPage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="border rounded shadow-lg w-full h-64 md:h-96"
+              className="border rounded shadow-lg w-full h-64 md:h-96 lg:h-46"
             ></iframe>
           </div>
         </div>
@@ -190,7 +190,7 @@ function ContactPage() {
           ))}
         </div>
       </div>
-        <Footer />
+      <Footer />
     </section>
   );
 }
