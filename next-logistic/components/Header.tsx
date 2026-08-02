@@ -18,10 +18,7 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import ContactPage from "@/app/contact/page";
 import SummarizeIcon from "@mui/icons-material/Summarize";
-
-// import "../app/hero.css";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -54,7 +51,7 @@ const Header = () => {
           <nav className="flex items-center gap-8" aria-label="Main menu">
             <Link
               href="/"
-              className="text-sm font-medium text-blue-600 font-bold"
+              className="text-sm font-bold text-gray-500 cursor-pointer"
             >
               Home
             </Link>
@@ -172,15 +169,15 @@ const Header = () => {
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
-                    <Link href="/code-of-ethics">
+                    <Link href="logistic-policy">
                       <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400 " />
                       Human right policy
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
-                    <Link href="/code-of-ethics">
+                    <Link href="/policies/logistic-sustainability">
                       <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
-                      Logistics sustainability policy
+                      Logistic Sustainability Policy
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
