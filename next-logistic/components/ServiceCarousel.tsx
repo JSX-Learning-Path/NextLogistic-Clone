@@ -121,7 +121,30 @@ function ServiceCarousel() {
                 </div>
               </div>
             ))}
-          </div>    
+          </div>
+        </div>
+        <button
+          aria-label="Previous"
+          onClick={() => goTo(Math.max(0, page - 1))}
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-300 rounded-full p-1 shadow"
+        >
+          &lt;&lt;
+        </button>
+        <button
+          aria-label="Next"
+          onClick={() => goTo(Math.min(pages - 1, page + 1))}
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-300 rounded-full p-1 shadow"
+        >
+          &gt;&gt;
+        </button>
+        <div className="flex justify-center mt-3 gap-2">
+          {Array.from({ length: pages }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => goTo(i)}
+              className={`w-2 h-2 rounded-full ${i === page ? "bg-slate-500" : "bg-slate-300"}`}
+            ></button>
+          ))}
         </div>
       </div>
     </section>
