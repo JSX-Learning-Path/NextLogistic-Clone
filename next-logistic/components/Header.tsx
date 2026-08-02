@@ -18,6 +18,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import SummarizeIcon from "@mui/icons-material/Summarize";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
@@ -37,7 +38,7 @@ const Header = () => {
         {/* Left: logo */}
         <div className="flex items-center gap-5">
           <Link href="/" aria-label="Next Logistic Home">
-            <img
+            <Image
               src={image.src}
               alt="Nextlogistic"
               width={78}

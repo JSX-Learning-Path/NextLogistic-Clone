@@ -8,8 +8,8 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const History = () => {
   return (
-    <section className="bg-white sm:grid-cols-1 md:grid-cols-2  ">
-      <div className="flex">
+    <section className="grid grid-cols-1 md:grid-cols-2 bg-white">
+      <div className="flex flex-col lg:flex-row gap-4">
         <div className="space-y-6 bg-indigo-100 p-[50px] rounded-xl w-full">
           <span className="text-sm text-indigo-500 font-semibold mb-3">
             HISTORY
@@ -51,8 +51,8 @@ const History = () => {
           </div>
         </div>
         <div className="bg-white p-4 rounded-lg shadow">
-          <div className="flex">
-            <div className="bg-blue-600 p-4 rounded-lg shadow flex gap-2 w-[700px]  ">
+          <div className="flex flex-col xl:flex-row gap-4">
+            <div className="bg-blue-600 p-4 rounded-lg shadow flex gap-2 w-full lg:w-2/3">
               <span className="">
                 <CheckCircleIcon />
               </span>
@@ -63,7 +63,7 @@ const History = () => {
                 routes, ensuring flexibility and uncompromising reliability.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full lg:w-1/3">
               <BarChart />
             </div>
           </div>

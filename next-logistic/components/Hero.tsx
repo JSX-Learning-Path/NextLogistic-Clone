@@ -1,5 +1,4 @@
 import Image from "next/image";
-/* eslint-disable @next/next/no-img-element */
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import DirectionsBoatFilledIcon from "@mui/icons-material/DirectionsBoatFilled";
 import TrainIcon from "@mui/icons-material/Train";
@@ -11,15 +10,15 @@ const Hero = () => {
       <Image
         src="/hero-trucks.png"
         alt="Hero Image"
-        fill
-        priority
+        width={1920}
+        height={1080}
         sizes="100vw"
-        className="object-cover opacity-100"
+        className="absolute inset-0 h-full w-full object-cover opacity-100"
       />
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white w-full">
         {/* Stats like in image */}
-        <div className="flex md:mb-15 flex-nowrap items-center justify-center gap-6 overflow-x-auto scrollbar-none px-6 text-sm md:gap-10 md:text-base text-white/90">
+        <div className="flex md:mb-15 flex-nowrap items-center justify-center gap-6 overflow-hidden scrollbar-none px-6 text-sm md:gap-10 md:text-base text-white/90">
           <div className="shrink-0 flex items-center gap-2 pr-4 border-r border-white">
             <span>
               <LocalShippingIcon
@@ -141,7 +140,9 @@ const Hero = () => {
             <img
               src="/logo.png"
               alt="Nextlogistic Logo"
-              className="hero-image w-250 h-auto transition-transform duration-300 group-hover:scale-105"
+              width={250}
+              height="auto"
+              className="w-full max-w-[1000px] h-auto transition-transform duration-300 group-hover:scale-105"
             />
           </div>
         </div>
