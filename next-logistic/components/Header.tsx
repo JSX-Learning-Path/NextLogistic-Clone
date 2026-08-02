@@ -19,6 +19,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import SummarizeIcon from "@mui/icons-material/Summarize";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -29,6 +30,7 @@ const Header = () => {
     setOpenCompany(false);
     setOpenTransport(false);
   };
+  const pathname = usePathname();
 
   return (
     <header className="fixed w-full bg-white shadow-md z-50 md:fixed ">
@@ -51,7 +53,11 @@ const Header = () => {
           <nav className="flex items-center gap-8" aria-label="Main menu">
             <Link
               href="/"
-              className="text-sm font-bold text-gray-500 cursor-pointer"
+              className={
+                pathname === "/"
+                  ? "text-sm font-bold text-blue-500 cursor-pointer"
+                  : "text-sm font-bold text-gray-500 cursor-pointer"
+              }
             >
               Home
             </Link>
@@ -366,13 +372,21 @@ const Header = () => {
             </div>
             <Link
               href="/news"
-              className="block py-1 text-sm font-bold text-gray-500"
+              className={
+                pathname === "/news"
+                  ? "block py-1 text-sm font-bold text-blue-500"
+                  : "block py-1 text-sm font-bold text-gray-500"
+              }
             >
               News
             </Link>
             <Link
               href="/contact"
-              className="block py-1 text-sm font-bold text-gray-500"
+              className={
+                pathname === "/contact"
+                  ? "block py-1 text-sm font-bold text-blue-500"
+                  : "block py-1 text-sm font-bold text-gray-500"
+              }
             >
               Contact
             </Link>
