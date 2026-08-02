@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Footer() {
   return (
     <footer className="bg-[#163a8c] text-white">
@@ -50,7 +48,15 @@ export default function Footer() {
             {/* avatars */}
             <div className="flex items-center gap-3 mt-6">
               <div className="flex space-x-2">
-               <Image src="/new-users.png" alt="New users" width={90} height={58} />
+                {/* Small fixed footer graphic avoids next/image runtime sizing warnings. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/new-users.png"
+                  alt="New users"
+                  width={90}
+                  height={58}
+                  className="block w-[90px] h-auto"
+                />
               </div>
 
               <p className="text-sm text-white/80">

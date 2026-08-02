@@ -13,6 +13,7 @@ const Hero = () => {
         alt="Hero Image"
         fill
         priority
+        sizes="100vw"
         className="object-cover opacity-100"
       />
 

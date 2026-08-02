@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import image from "@/public/image.png";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -38,12 +37,12 @@ const Header = () => {
         {/* Left: logo */}
         <div className="flex items-center gap-5">
           <Link href="/" aria-label="Next Logistic Home">
-            <Image
-              src={image}
+            <img
+              src={image.src}
               alt="Nextlogistic"
               width={78}
               height={30}
-              className="h-auto md:block"
+              className="block w-[78px] h-auto"
             />
           </Link>
         </div>
