@@ -3,7 +3,6 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import SocialIcons from "@/components/socials/Socials";
 
-
 function CodeOfEthics() {
   return (
     <Box
@@ -490,7 +489,7 @@ function CodeOfEthics() {
         <Box
           component="ul"
           sx={{
-            color: "text-secondary ",
+            color: "text.secondary ",
             mt: 1,
             pl: { sx: 3, md: 4 },
             pr: 1,

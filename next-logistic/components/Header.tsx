@@ -175,7 +175,7 @@ const Header = () => {
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
-                    <Link href="logistic-policy">
+                    <Link href="/policies/human-right-policy">
                       <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400 " />
                       Human right policy
                     </Link>
@@ -187,43 +187,43 @@ const Header = () => {
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
-                    <Link href="/code-of-ethics">
+                    <Link href="/policies/diversity-inclusion-policy">
                       <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
                       Diversity and inclusion policy
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
-                    <Link href="/code-of-ethics">
+                    <Link href="/policies/corporate-socials-rensponsibility">
                       <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
                       Corporate Social Responsibility (CSR) Policy
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
-                    <Link href="/code-of-ethics">
+                    <Link href="/policies/energy-management-policy">
                       <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
                       Energy Management policy
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
-                    <Link href="/code-of-ethics">
+                    <Link href="/policies/code-of-conduct-for-suppliers">
                       <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
-                      Environmental policy
+                      Code of conduct for suppliers and business partners
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
-                    <Link href="/code-of-ethics">
+                    <Link href="/policies/anti-corruption-policy">
                       <SummarizeIcon className="w-2 h-5 mr-2 text-blue-400" />
                       Anti-corruption and anti-bribery policy
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
-                    <Link href="/code-of-ethics">
+                    <Link href="/">
                       <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
-                      Environmental policy
+                      Report Registration Form
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
-                    <Link href="/code-of-ethics">
+                    <Link href="/policies/environmental-policy">
                       <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
                       Environmental policy
                     </Link>
