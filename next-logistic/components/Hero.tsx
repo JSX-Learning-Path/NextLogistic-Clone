@@ -135,15 +135,34 @@ const Hero = () => {
           </div>
         </div>
         {/* Logo container */}
-        <div className="group mb-6 transition-all duration-300">
+        <div className="group mb-6 transition-all duration-700 flex flex-row items-center  gap-6 md:gap-10">
           <div className="relative inline-block">
             <img
               src="/logo.png"
               alt="Nextlogistic Logo"
               width={250}
               height="auto"
-              className="w-full max-w-[1000px] h-auto transition-transform duration-300 group-hover:scale-105"
+              className="w-full max-w-[1000px] h-auto transition-transform duration-300 hover:scale-105"
             />
+          </div>
+          <div className="hidden md:relative md:block">
+            <Image
+              src="/aside-next-logo.png"
+              alt="Aside Next Logo"
+              width={390}
+              height={250}
+              className="h-auto"
+            />
+
+            <div className="absolute bottom-5 inset-0 flex items-center justify-center">
+              <Image
+                src="/cosmonavt.png"
+                alt="Cosmonavt Logo"
+                width={200}
+                height={200}
+                className="transition-transform duration-300 hover:scale-110"
+              />
+            </div>
           </div>
         </div>
       </div>
