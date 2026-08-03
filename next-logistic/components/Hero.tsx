@@ -135,17 +135,17 @@ const Hero = () => {
           </div>
         </div>
         {/* Logo container */}
-        <div className="group mb-6 transition-all duration-700 flex flex-row items-center  gap-6 md:gap-10">
+        <div className="group mb-6 transition-all duration-700 flex flex-row items-center  md:gap-5">
           <div className="relative inline-block">
             <img
               src="/logo.png"
               alt="Nextlogistic Logo"
               width={250}
               height="auto"
-              className="w-full max-w-[1000px] h-auto transition-transform duration-300 hover:scale-105"
+              className="w-full max-w-[950px] h-auto transition-transform duration-300 hover:scale-105"
             />
           </div>
-          <div className="hidden md:relative md:block">
+          <div className="relative hidden md:hidden xl:block">
             <Image
               src="/aside-next-logo.png"
               alt="Aside Next Logo"
@@ -154,7 +154,7 @@ const Hero = () => {
               className="h-auto"
             />
 
-            <div className="absolute bottom-5 inset-0 flex items-center justify-center">
+            <div className="absolute bottom-8 inset-0 flex items-center justify-center">
               <Image
                 src="/cosmonavt.png"
                 alt="Cosmonavt Logo"

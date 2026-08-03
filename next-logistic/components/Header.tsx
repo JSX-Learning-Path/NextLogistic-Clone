@@ -177,7 +177,7 @@ const Header = () => {
                   <div className="flex items-center text-black text-sm">
                     <Link href="/policies/human-right-policy">
                       <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400 " />
-                      Human right policy
+                      Human Rights Policy
                     </Link>
                   </div>
                   <div className="flex items-center text-black text-sm">
@@ -356,7 +356,12 @@ const Header = () => {
                     <span>
                       <DescriptionIcon className="w-3 h-3 text-blue-400" />
                     </span>
-                    <p className="text-gray-500 text-sm p-2"> CMR Convention</p>
+                    <Link
+                      href="/convetion/cmr-convetion"
+                      className="text-gray-500 text-sm p-2"
+                    >
+                      CMR Convention
+                    </Link>
                   </div>
                   <div className="flex items-center gap-2 hover:bg-blue-100/50  p-2 rounded transition">
                     <span>
