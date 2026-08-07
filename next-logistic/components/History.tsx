@@ -8,8 +8,8 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const History = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 bg-white">
-      <div className="flex flex-col lg:flex-row gap-4">
+    <section className=" bg-white">
+      <div className="flex flex-col md:flex md:flex-row">
         <div className="space-y-6 bg-indigo-100 p-[50px] rounded-xl w-full">
           <span className="text-sm text-indigo-500 font-semibold mb-3">
             HISTORY
@@ -71,18 +71,18 @@ const History = () => {
             <ul>
               <div className="mt-4 flex flex-wrap gap-2">
                 {[
-                  "Оптимизация на разходите",
-                  "Модерен автопарк",
-                  "Екология",
-                  "Планиране",
-                  "Сигурност",
-                  "Експресни доставки",
-                  "Мониторинг",
-                  "Технологии и иновации",
+                  "Cost Optimization",
+                  "Modern Fleet",
+                  "Ecology",
+                  "Planning",
+                  "Security",
+                  "Express Deliveries",
+                  "Monitoring",
+                  "Technologies and Innovations",
                 ].map((t) => (
                   <span
                     key={t}
-                    className="text-sm px-3 py-1.5 border rounded-full text-indigo-600 bg-white"
+                    className="text-sm px-3 py-1.5 border rounded-full text-blue-600 bg-white hover:bg-blue-100/50"
                   >
                     {t}
                   </span>
@@ -97,7 +97,7 @@ const History = () => {
                 height={400}
                 className="w-full h-auto rounded-lg object-cover"
               />
-
+             
               <Link
                 href="/next-trucks"
                 className="absolute bottom-4 right-4  text-white px-4 py-2 rounded-lg shadow "
