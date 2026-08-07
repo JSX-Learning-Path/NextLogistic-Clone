@@ -18,7 +18,7 @@ function CMRConvetion() {
         sx={{
           color: "text.secondary",
           px: { xs: 3, md: 3 },
-          py: { xs: 2, md: 1 },
+          py: { xs: 10, md: 10 },
           width: { xs: "90%", md: "70%", lg: "60%" },
         }}
       >
