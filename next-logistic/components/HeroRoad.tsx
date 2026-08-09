@@ -11,8 +11,8 @@ const HeroRoad = () => {
         priority
         className="object-cover object-center"
       />
-      <div className="absolute inset-x-0 bottom-0 z-10 text-center text-white pb-2 mx-3 xl:bottom-auto xl:top-1/2 xl:-translate-y-1/2 xl:w-1/2 xl:mx-auto">
-        <div className="bg-blue-600 rounded-xl w-full opacity-90 px-5 ">
+      <div className="absolute inset-x-0 bottom-0 z-10 text-center text-white  xl:bottom-auto xl:top-1/2 xl:-translate-y-1/4 xl:w-1/2 xl:mx-auto ">
+        <div className="bg-blue-600 rounded-xl w-full opacity-90 px-10 py-10">
           <h2 className="uppercase text-3xl font-bold mb-2 md:text-3xl md:mb-3 lg:text-5xl lg:mb-2">
             {" "}
             Leader in road transport

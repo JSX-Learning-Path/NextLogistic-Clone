@@ -7,7 +7,6 @@ function Academy() {
         src="/academy-girls-talking.png"
         alt="Academy Girls"
         fill
-        priority
         className="object-cover object-center"
       />
       <div className="absolute inset-x-0 bottom-0 z-10 text-center text-white pb-2 mx-3 xl:bottom-auto xl:top-2/3 xl:-translate-y-1/2 xl:w-1/2 xl:mx-auto">

@@ -12,14 +12,15 @@ const Hero = () => {
         alt="Hero Image"
         width={1920}
         height={1080}
-        sizes="100vw"
+        priority
+        // sizes="100vw"
         className="absolute inset-0 h-full w-full object-cover opacity-100"
       />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white w-full">
         {/* Stats like in image */}
-        <div className="flex md:mb-15 flex-nowrap items-center justify-center gap-6 overflow-hidden scrollbar-none px-6 text-sm md:gap-10 md:text-base text-white/90">
-          <div className="shrink-0 flex items-center gap-2 pr-4 border-r border-white">
+        <div className="flex md:mb-15 flex-wrap items-center justify-center gap-6  scrollbar-none px-6 text-sm md:gap-10 md:text-base text-white/90">
+          <div className="flex items-center gap-2 pr-4 border-r border-white">
             <span>
               <LocalShippingIcon
                 sx={{
@@ -43,7 +44,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="shrink-0 flex items-center text-center border-r border-white pr-4">
+          <div className=" flex items-center text-center border-r border-white pr-4">
             <span>
               <DirectionsBoatFilledIcon
                 sx={{
@@ -65,7 +66,7 @@ const Hero = () => {
               </p>
             </div>
           </div>
-          <div className="shrink-0 flex items-center gap-2 pr-4 border-r border-white ">
+          <div className="flex items-center gap-2 pr-4 border-r border-white ">
             <span>
               <TrainIcon
                 sx={{
@@ -88,7 +89,7 @@ const Hero = () => {
               <p className="text-sm">WAGONS</p>
             </div>
           </div>
-          <div className="hidden shrink-0 md:flex items-center text-center border-r border-white pr-4">
+          <div className="hidden  md:flex items-center text-center border-r border-white pr-4">
             <span>
               <DirectionsBoatFilledIcon
                 sx={{
@@ -110,7 +111,7 @@ const Hero = () => {
               </p>
             </div>
           </div>
-          <div className="hidden shrink-0 md:flex items-center gap-2 pr-4  ">
+          <div className="hidden  md:flex items-center gap-2 pr-4  ">
             <span>
               <TrainIcon
                 sx={{
@@ -135,35 +136,35 @@ const Hero = () => {
           </div>
         </div>
         {/* Logo container */}
-        <div className="group mb-6 transition-all duration-700 flex flex-row items-center  md:gap-5">
+        <div className="group mb-6 flex flex-col xl:flex-row items-center gap-6 transition-all duration-700">
           <div className="relative inline-block">
             <img
               src="/logo.png"
               alt="Nextlogistic Logo"
               width={250}
               height="auto"
-              className="w-full max-w-[950px] h-auto transition-transform duration-300 hover:scale-105"
+              className="w-[85%] md:w-full max-w-[950px] h-auto transition-transform duration-300 hover:scale-105"
             />
           </div>
-          <div className="relative hidden md:hidden xl:block">
+          {/* <div className="relative hidden md:hidden xl:block">
             <Image
               src="/aside-next-logo.png"
               alt="Aside Next Logo"
               width={390}
               height={250}
-              className="h-auto"
+              className="w-auto h-auto"
             />
 
             <div className="absolute bottom-8 inset-0 flex items-center justify-center">
               <Image
                 src="/cosmonavt.png"
-                alt="Cosmonavt Logo"
+                alt="Cosmonavt"
                 width={200}
                 height={200}
-                className="transition-transform duration-300 hover:scale-110"
+                className="w-auto h-auto transition-transform duration-300 hover:scale-110"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

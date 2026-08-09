@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 
 function CMRConvetion() {
   return (
@@ -76,6 +77,81 @@ function CMRConvetion() {
           convention;
         </Typography>
         <Typography sx={{}}>(b) to carriage of dead bodies;</Typography>
+        <Typography sx={{}}>
+          (c) to carriage of furniture in removal operations.
+        </Typography>
+        <Typography sx={{ mt: 2, mb: 2 }}>
+          The Contracting Parties undertake not to vary, by way of special
+          agreements concluded between two or more of them, the terms of this
+          Convention, except to exclude from its application their frontier
+          traffic or to authorize the use in transport operations entirely
+          confined to their territories of consignment notes representing a
+          title to the goods.
+        </Typography>
+        <Typography component="span" variant="body2">
+          ....
+        </Typography>
+        <Box component="div" sx={{ mt: 2, mb: 2 }}>
+          <Typography>CHAPTER VIII</Typography>
+          <Typography>FINAL PROVISIONS</Typography>
+        </Box>
+        <Typography sx={{ mt: 2, mb: 2 }}>Article 51</Typography>
+        <Typography sx={{ mt: 2, mb: 2 }}>
+          After 31 August 1956, the original of this Convention shall be
+          deposited with the Secretary-General of the United Nations, who shall
+          transmit certified true copies to each of the States referred to in
+          Article 42, paragraphs 1 and 2.
+        </Typography>
+        <Typography sx={{}}>
+          IN WITNESS WHEREOF the undersigned, being duly authorized thereto,
+          have signed this Convention.
+        </Typography>
+        <Typography sx={{ mt: 2, mb: 2 }}>
+          Done at Geneva, on 19 May 1956, in a single copy in the English and
+          French languages, both texts being equally authentic.
+        </Typography>
+        <Typography sx={{ mt: 2, mb: 2 }}>PROTOCOL OF SIGNATURE</Typography>
+        <Typography sx={{ mt: 2, mb: 2 }}>
+          At the time of signing the Convention on the Contract for the
+          International Carriage of Goods by Road, the undersigned, duly
+          authorized, have agreed upon the following declaration and
+          explanation:
+        </Typography>
+        <Typography sx={{ mt: 2, mb: 2 }}>
+          This Convention shall not apply to carriage between the United Kingdom
+          of Great Britain and Northern Ireland and the Irish Republic.
+        </Typography>
+        <Typography sx={{ mt: 2, mb: 2 }}>
+          Addition to Article 1, paragraph 4: The undersigned undertake to enter
+          into negotiations with a view to concluding conventions on the
+          contract for the carriage of furniture and on the contract for
+          combined transport.
+        </Typography>
+        <Typography sx={{ mt: 2, mb: 2 }}>
+          IN WITNESS WHEREOF, the undersigned, being duly authorized thereto,
+          have signed this Protocol.
+        </Typography>
+        <Typography sx={{ mt: 2, mb: 2 }}>
+          Done at Geneva, on 19 May 1956, in a single copy in the English and
+          French languages, both texts being equally authentic.
+        </Typography>
+        <Divider sx={{ width: "200px", mt: 5, mb: 2 }} />
+        <Typography sx={{ mt: 2, mb: 2 }}>
+          According to Decree No. 1143 of the State Council of 29.07.1977,
+          published in the State Gazette, issue 61 of 1977, the Convention on
+          the Contract for the International Carriage of Goods by Road was
+          ratified by Bulgaria with the following reservation:
+        </Typography>
+        <Typography sx={{ mt: 2, mb: 2 }}>
+          “The People’s Republic of Bulgaria does not consider itself bound by
+          Article 47, which provides for compulsory jurisdiction of the
+          International Court of Justice.”
+        </Typography>
+        <Divider sx={{ width: "200px", mt: 5, mb: 2 }} />
+        <Typography sx={{ mt: 2, mb: 2 }}>
+          The reservation was withdrawn by Act of the National Assembly of
+          12.01.1994, published in the State Gazette, issue 8 of 1994.
+        </Typography>
       </Box>
     </Box>
   );

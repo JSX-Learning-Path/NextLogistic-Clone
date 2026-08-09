@@ -39,10 +39,8 @@ const Header = () => {
         <div className="flex items-center gap-5">
           <Link href="/" aria-label="Next Logistic Home">
             <Image
-              src={image.src}
+              src={image}
               alt="Nextlogistic"
-              width={78}
-              height={30}
               className="block w-[78px] h-auto"
             />
           </Link>

@@ -75,7 +75,7 @@ function ServiceCarousel() {
   return (
     <section className="mt-6 ">
       <div className="relative">
-        <div ref={containerRef} className="overflow-hidden">
+        <div ref={containerRef} className="w-full overflow-hidden">
           <div className="flex" style={{ width: `${pages * 100}%` }}>
             {Array.from({ length: pages }).map((_, p) => (
               <div
@@ -99,7 +99,7 @@ function ServiceCarousel() {
                         />
                       )}
                       <div className="absolute inset-0">
-                        <div className="absolute left-6 bottom-6 text-white z-10 max-w[70%]">
+                        <div className="absolute left-6 bottom-6 z-10 text-white max-w-[70%]">
                           <h3 className="font-semibold text-lg">
                             {card.title}
                           </h3>

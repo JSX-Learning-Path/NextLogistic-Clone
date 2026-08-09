@@ -3,13 +3,10 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
-// import Typography from "@mui/material/Typography";
-// import IconButton from "@mui/material/IconButton";
-// import UndoOutlinedIcon from "@mui/icons-material/UndoOutlined";
 import { PieChart } from "@mui/x-charts";
 import { PieItemIdentifier } from "@mui/x-charts/models";
 
-// Small inline sample data to avoid missing external helper file (./webUsageStats)
+
 const platforms = [
   { id: "Web", value: 55 },
   { id: "Mobile", value: 45 },
@@ -40,12 +37,11 @@ export default function PieClick() {
           <PieChart
             series={series}
             width={300}
-            height={300}
+            height={200}
             hideLegend
             onItemClick={(event, d) => setItemData(d)}
           />
         ) : (
-          // placeholder to match chart size during SSR
           <Box sx={{ width: 300, height: 300 }} />
         )}
       </Box>

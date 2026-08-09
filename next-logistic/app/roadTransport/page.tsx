@@ -1,14 +1,13 @@
-import React from "react";
 import HeroRoad from "@/components/HeroRoad";
-import Footer from "@/components/Footer";
+import RoadTransport from "@/components/RoadTransport";
 
-const RoadTransport = () => {
+const RoadTransportPage = () => {
   return (
-    <div className="h-screen">
+    <div className="min-h-screen">
       <HeroRoad />
-      <Footer />
+      <RoadTransport />
     </div>
   );
 };
 
-export default RoadTransport;
+export default RoadTransportPage;
