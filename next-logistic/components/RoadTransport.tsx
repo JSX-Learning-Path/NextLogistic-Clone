@@ -1,8 +1,8 @@
 function RoadTransport() {
   return (
     <section className="bg-white h-screen">
-      <div className="flex flex-col md:flex-row md:gap-5 p-10">
-        <div className="mx-auto w-1/2 flex flex-col py-20">
+      <div className="flex flex-col md:flex-row md:gap-5 py-5 px-5 md:px-10">
+        <div className="w-1/2 flex flex-col py-5 md:w-1/2 md:py-10">
           <h2 className="text-sm font-bold mb-4 text-blue-600 ">
             Road Transport Services
             <hr className="border-blue-600 w-[35px]  mt-2" />
@@ -20,9 +20,11 @@ function RoadTransport() {
             className="flex justify-center flex-row mt-5 border py-2 rounded-xl border-black/20 hover:bg-blue-100/20
          transition-all duration-400"
           >
-            <ul className="w-1/5 flex flex-col flex-start py-2 px-2">
-              <li className="text-blue-600 font-extrabold text-2xl">1450</li>
-              <li className="text-black/80 ">Trucks</li>
+            <ul className="md:w-1/5 flex flex-col flex-start py-2 px-2">
+              <li className="text-blue-600 font-extrabold text-xl md:text-2xl">
+                1450
+              </li>
+              <li className="text-black/80 text-sm">Trucks</li>
             </ul>
             <div className="w-full border-l border-black/20 pl-5">
               <h6 className="font-extrabold text-black/80">Truck fleet</h6>
@@ -38,8 +40,10 @@ function RoadTransport() {
          transition-all duration-400"
           >
             <ul className="w-1/5 flex flex-col flex-start py-2 px-2">
-              <li className="text-blue-600 font-extrabold text-2xl">2850</li>
-              <li className="text-black/80 ">Trailers</li>
+              <li className="text-blue-600 font-extrabold text-xl md:text-2xl">
+                2850
+              </li>
+              <li className="text-black/80 text-sm">Trailers</li>
             </ul>
             <div className="w-full border-l border-black/20 pl-5">
               <h6 className="font-extrabold text-black/80">
@@ -59,8 +63,10 @@ function RoadTransport() {
          transition-all duration-400"
           >
             <ul className="w-1/5 flex flex-col flex-start py-2 px-2">
-              <li className="text-blue-600 font-extrabold text-2xl">7800</li>
-              <li className="text-black/80 ">Trusted Carrier</li>
+              <li className="text-blue-600 font-extrabold text-xl md:text-2xl">
+                7800
+              </li>
+              <li className="text-black/80 text-sm">Trusted Carrier</li>
             </ul>
             <div className="w-full border-l border-black/20 pl-5">
               <h6 className="font-extrabold text-black/80">Partner network</h6>
@@ -75,9 +81,11 @@ function RoadTransport() {
             className="flex justify-center flex-row mt-5 border py-2 rounded-xl border-black/20 hover:bg-blue-100/20
          transition-all duration-400"
           >
-            <ul className="w-1/5 flex flex-col flex-start py-2 px-3">
-              <li className="text-blue-600 font-extrabold text-2xl">30</li>
-              <li className="text-black/80 ">Countries</li>
+            <ul className="w-1/5 flex flex-col flex-start py-2 px-2 ">
+              <li className="text-blue-600 font-extrabold text-xl md:text-2xl">
+                30
+              </li>
+              <li className="text-black/80 text-xs ">Countries</li>
             </ul>
             <div className="w-full border-l border-black/20 pl-5">
               <h6 className="font-extrabold text-black/80">Partner network</h6>
