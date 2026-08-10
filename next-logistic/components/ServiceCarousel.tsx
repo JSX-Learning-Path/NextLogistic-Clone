@@ -83,7 +83,7 @@ function ServiceCarousel() {
                 style={{ width: `${100 / pages}%`, paddingRight: 12 }}
               >
                 <div className="flex gap-4">
-                  {cards.slice(p * 4, p * 4 + 4).map((card, index) => (
+                  {cards.slice(p * 2, p * 4 + 4).map((card, index) => (
                     <div
                       key={index}
                       className="relative rounded-lg overflow-hidden flex-1"
