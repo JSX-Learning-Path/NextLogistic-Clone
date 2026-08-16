@@ -4,6 +4,10 @@ import GridGallery from "@/components/GridGallery";
 import TransportServices from "@/components/TransportServeices";
 import LogisticView from "@/components/LogisticView";
 import GreenLogistic from "@/components/GreenLogistic";
+import InterModalTransport from "@/components/InterModalTransport";
+import ProfessionalsPeople from "@/components/ProfessionalsPeople";
+import SocialMedia from "@/components/SocialMedia";
+import WordOfLogistic from "@/components/WordofLogistic";
 function Home() {
   return (
     <>
@@ -13,6 +17,10 @@ function Home() {
       <TransportServices />
       <GreenLogistic />
       <LogisticView />
+      <InterModalTransport />
+      <ProfessionalsPeople />
+      <SocialMedia />
+      <WordOfLogistic />
     </>
   );
 }
