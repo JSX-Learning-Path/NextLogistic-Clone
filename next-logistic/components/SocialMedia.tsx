@@ -1,4 +1,5 @@
-import { hash } from "crypto";
+// import { hash } from "crypto";
+import Image from "next/image";
 
 function SocialMedia() {
     const posts = [
@@ -43,11 +44,21 @@ function SocialMedia() {
                     ))}
                 </div>
             </div>
-            <div className="mx-auto mt-8 flex max-w-[1050px] items-start justify-center gap-5 overflow-x-auto pb-5 lg:overflow-visible">
+            <div className="mx-auto mt-8 grid w-full max-w-[1050px] grid-cols-1 gap-5 px-5 sm:grid-cols-2 lg:grid-cols-4 lg:px-0">
                 {posts.map((post, index) => (
-                    <div key={index} className={`group w-[250px] min-w-[250px] overflow-hidden rounded-[11px] bg-white shadow-[0_2px_10px_rgba(0,0,0,0.16)] transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-102 hover:shadow-[0_18px_35px_rgba(0,0,0,0.22)]
-                                `}>
-                        <img src={post.image} alt={`Social media post ${index + 1}`} className="h-full w-full object-cover" />
+                    <div
+                        key={index}
+                        className="group relative w-full overflow-hidden rounded-[11px] bg-white shadow-[0_2px_10px_rgba(0,0,0,0.16)] transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-102 hover:shadow-[0_18px_35px_rgba(0,0,0,0.22)]"
+                    >
+                        <div className="relative aspect-[5/6] w-full">
+                            <Image
+                                src={post.image}
+                                alt={`Social media post ${index + 1}`}
+                                fill
+                                sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) 45vw, 250px"
+                                className="object-cover"
+                            />
+                        </div>
                     </div>
                 ))}
             </div>

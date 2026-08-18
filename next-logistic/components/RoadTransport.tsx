@@ -1,8 +1,11 @@
+
+
+
 function RoadTransport() {
   return (
     <section className="bg-white h-screen">
       <div className="flex flex-col md:flex-row md:gap-5 py-5 px-5 md:px-10">
-        <div className="w-1/2 flex flex-col py-5 md:w-1/2 md:py-10">
+        <div className="flex flex-col py-5 md:w-1/2 md:py-10">
           <h2 className="text-sm font-bold mb-4 text-blue-600 ">
             Road Transport Services
             <hr className="border-blue-600 w-[35px]  mt-2" />
@@ -97,6 +100,7 @@ function RoadTransport() {
             </div>
           </article>
         </div>
+        <div className="bg-blue-300 rounded-bl-xl">dasda</div>
       </div>
     </section>
   );

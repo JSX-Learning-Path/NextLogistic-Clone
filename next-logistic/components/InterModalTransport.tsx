@@ -1,4 +1,5 @@
 // "use client";
+import Image from "next/image";
 
 type Stat = { value: string; label: string, description: string };
 type ChartPoint = { year: string, value: number, display: string };
@@ -29,7 +30,7 @@ const SECTION: TransportSection[] = [
             "Railway license for freight transport",
             "Express deliveries",
         ],
-        image: { src: "/train.png", alt: "Intermodal freight train" },
+        image: { src: "/next-train-intermodel.png", alt: "Intermodal freight train" },
     }, {
         title: "Combined transport",
         subTitle: "Total Reservations 2020 - 2024",
@@ -54,7 +55,7 @@ const SECTION: TransportSection[] = [
             "Cost optimization",
             "Ferry reservations",
         ],
-        image: { src: "/ship.png", alt: "RoRo ferry at sea" },
+        image: { src: "/ferry-intermodal.png", alt: "RoRo ferry at sea" },
     },
 ];
 

@@ -29,7 +29,7 @@ export default function PieClick() {
   return (
     <Stack
       direction={{ xs: "column", md: "row" }}
-      spacing={{ xs: 0, md: 4 }}
+      spacing={{ xs: 5, md: 4 }}
       sx={{ width: "100%" }}
     >
       <Box sx={{ flexGrow: 1 }}>

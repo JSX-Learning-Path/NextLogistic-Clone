@@ -1,44 +1,45 @@
 import Image from "next/image";
+
 const teamMembers = [
     {
         name: "Ganka Moncheva",
         role: "Chief Accountant",
-        image: "/images/team/ganka-moncheva.jpg",
+        image: "/ganka.png",
     },
     {
         name: "Nasie Hashimova",
         role: "Manager",
-        image: "/images/team/nasie-hashimova.jpg",
+        image: "/nasie.png",
     },
     {
         name: "Tihomir Blajev",
         role: "Engineering Manager",
-        image: "/images/team/tihomir-blajev.jpg",
+        image: "/tihomir.png",
     },
     {
         name: "Galina Laleva",
         role: "Deputy Manager",
-        image: "/images/team/galina-laleva.jpg",
+        image: "/galina.png",
     },
     {
         name: "Rumen Minkov",
         role: "Manager",
-        image: "/images/team/rumen-minkov.jpg",
+        image: "/rumen.png",
     },
     {
         name: "Petya Tsvetanova",
         role: "Manager",
-        image: "/images/team/petya-tsvetanova.jpg",
+        image: "/petya.png",
     },
     {
         name: "Belon Manukian",
         role: "Engineering Manager",
-        image: "/images/team/belon-manukian.jpg",
+        image: "/belon.png",
     },
     {
         name: "Eduard Bashev",
         role: "Deputy Manager",
-        image: "/images/team/eduard-bashev.jpg",
+        image: "/edie.png",
     },
 ];
 
