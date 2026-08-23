@@ -5,14 +5,14 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 function GreenLogistic() {
   return (
     <section className="bg-white">
-      <div className="mt-5">
+      <div className="mt-5 ">
         <div className="relative overflow-hidden">
           <Image
             src="/green-logistic.png"
             alt="Description"
             width={1750}
             height={900}
-            className="object-cover md:object-contain"
+            className="object-cover md:object-contain md:h-full w-full"
           />
 
           <div className="absolute inset-0 flex flex-col justify-center w-full md:w-1/2  px-4 md:px-10">
