@@ -8,6 +8,7 @@ import InterModalTransport from "@/components/InterModalTransport";
 import ProfessionalsPeople from "@/components/ProfessionalsPeople";
 import SocialMedia from "@/components/SocialMedia";
 import WordOfLogistic from "@/components/WordofLogistic";
+import MomentOfTrust from "@/components/MomentOfTrust";
 function Home() {
   return (
     <>
@@ -19,6 +20,7 @@ function Home() {
       <LogisticView />
       <InterModalTransport />
       <ProfessionalsPeople />
+      <MomentOfTrust />
       <SocialMedia />
       <WordOfLogistic />
     </>

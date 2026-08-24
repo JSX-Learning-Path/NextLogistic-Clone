@@ -5,17 +5,14 @@ import Image from "next/image";
 import Link from "next/dist/client/link";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { BarChart } from "@mui/x-charts/BarChart";
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const History = () => {
   return (
     <section className="w-full overflow-hidden bg-white">
       <div className="mx-auto flex w-full min-w-0 flex-col md:flex-row">
-
         {/* LEFT */}
         <div className="min-w-0 w-full space-y-6 rounded-xl bg-[#E9EFFF] p-5 md:p-[50px]">
-
           <h5 className="text-sm font-semibold text-indigo-500">
             HISTORY
             <hr className="w-[30px] border-blue-600" />
@@ -47,11 +44,8 @@ const History = () => {
 
           {/* Charts */}
           <div className="flex min-w-0 flex-col gap-4 md:flex-row">
-
             <div className="min-w-0 w-full rounded-lg bg-white p-4 shadow">
-              <h4 className="text-gray-500">
-                Annual Revenue
-              </h4>
+              <h4 className="text-gray-500">Annual Revenue</h4>
 
               <div className="w-full overflow-hidden">
                 <PieChart />
@@ -81,16 +75,20 @@ const History = () => {
                 />
               </div>
             </div>
-
           </div>
         </div>
 
         {/* RIGHT */}
         <div>
           <div className="flex flex-col md:flex md:flex-row px-10">
-            <div className="bg-blue-600 flex gap-2 text-sm mt-10 py-5 rounded-xl md:pb-10" >
-              <CheckCircleIcon />
-              <p>Logistics services combining efficiency, innovation, and sustainability. With a network of trusted partners and modern infrastructure, we provide solutions for key destinations and routes, ensuring flexibility and uncompromising reliability.</p>
+            <div className="bg-blue-600 flex gap-2 text-sm mt-10 py-5 rounded-xl md:pb-10">
+              <CheckCircleIcon  sx={{ color: "white" }} />
+              <p>
+                Logistics services combining efficiency, innovation, and
+                sustainability. With a network of trusted partners and modern
+                infrastructure, we provide solutions for key destinations and
+                routes, ensuring flexibility and uncompromising reliability.
+              </p>
             </div>
             <div className="mt-10">
               <BarChart
@@ -109,17 +107,40 @@ const History = () => {
                 height={250}
               />
             </div>
-
           </div>
           <div className="hidden md:hidden xl:px-10 xl:mt-5 xl:flex xl:flex-wrap xl:gap-2">
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50"><CheckCircleIcon className="text-blue-600" />Cost Optimization</span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50"><CheckCircleIcon className="text-blue-600" />Modern Fleet</span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50"><CheckCircleIcon className="text-blue-600" />Ecology</span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50"><CheckCircleIcon className="text-blue-600" />Planning</span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50"><CheckCircleIcon className="text-blue-600" />Security</span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50"><CheckCircleIcon className="text-blue-600" />Express Deliveries</span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50"><CheckCircleIcon className="text-blue-600" />Monitoring</span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50"><CheckCircleIcon className="text-blue-600" />Technology and innovation</span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Cost Optimization
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Modern Fleet
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Ecology
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Planning
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Security
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Express Deliveries
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Monitoring
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Technology and innovation
+            </span>
           </div>
           <div className="relative mt-10 px-10">
             <Image
@@ -143,12 +164,14 @@ const History = () => {
                 <span>Subcontractors</span>
               </div>
             </div>
-            <Link href="/roadTransport" className="absolute bottom-5 right-20  text-white flex flex-row gap-5">
+            <Link
+              href="/roadTransport"
+              className="absolute bottom-5 right-20  text-white flex flex-row gap-5"
+            >
               Road Transport <ArrowRightIcon />
             </Link>
           </div>
         </div>
-
       </div>
     </section>
   );
