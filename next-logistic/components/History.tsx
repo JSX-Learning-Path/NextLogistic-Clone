@@ -82,8 +82,8 @@ const History = () => {
         <div>
           <div className="flex flex-col md:flex md:flex-row px-10">
             <div className="bg-blue-600 flex gap-2 text-sm mt-10 py-5 rounded-xl md:pb-10">
-              <CheckCircleIcon  sx={{ color: "white" }} />
-              <p>
+              <CheckCircleIcon sx={{ color: "white" }} />
+              <p className="text-white text-sm">
                 Logistics services combining efficiency, innovation, and
                 sustainability. With a network of trusted partners and modern
                 infrastructure, we provide solutions for key destinations and
