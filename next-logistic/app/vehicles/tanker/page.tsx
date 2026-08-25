@@ -113,7 +113,7 @@ function Tanker() {
         }}
       >
         <Typography
-          variant="h4"
+          variant="h5"
           sx={{ fontWeight: "semibold", textTransform: "uppercase" }}
         >
           Cisterns
@@ -240,6 +240,104 @@ function Tanker() {
           transport of liquids with guaranteed purity and quality is of vital
           importance.
         </Typography>
+        <Box
+          component="div"
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "20px",
+            marginTop: "20px",
+          }}
+        >
+          <Image
+            src="/tanker-2.png"
+            alt="Tanker"
+            layout="responsive"
+            width={700}
+            height={475}
+          />
+          <Image
+            src="/tanker-3.png"
+            alt="Tanker"
+            layout="responsive"
+            width={700}
+            height={475}
+          />
+          <Image
+            src="/tanker-4.png"
+            alt="Tanker"
+            layout="responsive"
+            width={700}
+            height={475}
+          />
+        </Box>
+        <Divider sx={{ marginTop: "40px" }} />
+        <Box sx={{ display: "flex", alignItems: "center", marginTop: "30px" }}>
+          <Typography
+            sx={{ marginRight: "10px", color: "gray", fontWeight: "bold" }}
+          >
+            Share
+          </Typography>
+          <SocialIcons />
+        </Box>
+        <Box
+          sx={{
+            width: "100%",
+            padding: { xs: 1, md: 2 },
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Box>
+            <Typography variant="h5" sx={{fontWeight: "bold"}}>
+              Contact Us
+            </Typography>
+            <Typography sx={{}}>
+              Fill out the form to request transportation services.
+            </Typography>
+            <Typography sx={{}}>
+              We will contact you as soon as possible.
+            </Typography>
+          </Box>
+          <Grid container spacing={6} sx={{ marginTop: "20px" }}>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <TextField fullWidth placeholder="URN" />
+            </Grid>
+
+            <Grid size={{ xs: 12, md: 6 }}>
+              <TextField fullWidth placeholder="Name and Surename" />
+            </Grid>
+
+            <Grid size={{ xs: 12, md: 6 }}>
+              <TextField fullWidth placeholder="Email" />
+            </Grid>
+
+            <Grid size={{ xs: 12, md: 6 }}>
+              <TextField fullWidth placeholder="Phone" />
+            </Grid>
+
+            <Grid size={{ xs: 12 }}>
+              <TextField
+                fullWidth
+                multiline
+                rows={5}
+                placeholder="How can we help you?"
+              />
+            </Grid>
+          </Grid>
+          <Button
+            variant="contained"
+            sx={{
+              marginTop: "30px",
+              padding: "12px",
+              fontWeight: "bold",
+              borderRadius: "8px",
+            }}
+          >
+            Make an Appointment
+          </Button>
+        </Box>
       </Box>
     </Box>
   );
