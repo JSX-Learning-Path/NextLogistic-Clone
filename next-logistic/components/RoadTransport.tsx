@@ -1,10 +1,9 @@
-
-
-
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { BarChart } from "@mui/x-charts/BarChart";
 function RoadTransport() {
   return (
     <section className="bg-white h-screen">
-      <div className="flex flex-col md:flex-row md:gap-5 py-5 px-5 md:px-10">
+      <div className="flex flex-col md:flex-row md:gap-5 px-1 md:px-10 ">
         <div className="flex flex-col py-5 md:w-1/2 md:py-10">
           <h2 className="text-sm font-bold mb-4 text-blue-600 ">
             Road Transport Services
@@ -100,7 +99,78 @@ function RoadTransport() {
             </div>
           </article>
         </div>
-        <div className="bg-blue-300 rounded-bl-xl">dasda</div>
+        {/* Right side */}
+        <div className="bg-[#E9EFFF] rounded-bl-xl">
+          <div className="flex flex-row gap-5 md:flex-wrap">
+            <div className="bg-blue-600 flex flex-1 gap-2 px-5 py-10 mt-10  mx-auto rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-xl ">
+              <CheckCircleIcon sx={{ color: "white", fontWeight: "bold" }} />
+              <p className="text-white text-sm max-w-md">
+                Logistics services that combine efficiency, innovation, and
+                sustainability. With a network of trusted partners and modern
+                infrastructure, we provide solutions for key destinations and
+                routes, ensuring flexibility and uncompromising reliability.
+              </p>
+            </div>
+            <div className=" bg-white rounded-xl px-5 py-10 mt-10">
+              <div className="mt-10">
+                <h5 className="font-extrabold flex flex-col text-gray-700">
+                  Total transport completed
+                  <span>(2020 - 2024)</span>
+                </h5>
+
+                <BarChart
+                  xAxis={[
+                    {
+                      scaleType: "band",
+                      data: ["2020", "2021", "2022", "2023", "2024"],
+                    },
+                  ]}
+                  series={[
+                    {
+                      data: [6400, 27500, 38700, 38400, 29800],
+                    },
+                  ]}
+                  width={300}
+                  height={250}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="hidden md:hidden xl:px-10 xl:mt-5 xl:flex xl:flex-wrap xl:gap-2">
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Cost Optimization
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Modern Fleet
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Ecology
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Planning
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Security
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Express Deliveries
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Monitoring
+            </span>
+            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
+              <CheckCircleIcon className="text-blue-600" />
+              Technology and innovation
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
