@@ -4,23 +4,19 @@ import { Box, Dialog, Divider } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import SocialIcons from "@/components/socials/Socials";
+import Link from "next/link";
+
 const images = [
-  "/trash-yard-images/trash-1.png",
-  "/trash-yard-images/trash-2.png",
-  "/trash-yard-images/trash-3.png",
-  "/trash-yard-images/trash-4.png",
-  "/trash-yard-images/trash-5.png",
-  "/trash-yard-images/trash-6.png",
-  "/trash-yard-images/trash-7.png",
-  "/trash-yard-images/trash-8.png",
-  "/trash-yard-images/trash-9.png",
-  "/trash-yard-images/trash-10.png",
-  "/trash-yard-images/trash-11.png",
-  "/trash-yard-images/trash-12.png",
-  "/trash-yard-images/trash-13.png",
-  "/trash-yard-images/trash-14.png",
+  "/obshtina-tsarevo/tsarevo-1.png",
+  "/obshtina-tsarevo/tsarevo-2.png",
+  "/obshtina-tsarevo/tsarevo-3.png",
+  "/obshtina-tsarevo/tsarevo-4.png",
+  "/obshtina-tsarevo/tsarevo-5.png",
+  "/obshtina-tsarevo/tsarevo-6.png",
+  "/obshtina-tsarevo/tsarevo-7.png",
+  "/obshtina-tsarevo/tsarevo-8.png",
 ];
-function TrashYard() {
+function ObshtinaTsarevo() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   return (
     <Box
@@ -48,8 +44,8 @@ function TrashYard() {
       >
         <Box sx={{ position: "relative", width: "100%" }}>
           <Image
-            src="/trash-yard.png"
-            alt="Trash Yard"
+            src="/obshtina-tsarevo.png"
+            alt="Obshtina Tsarevo"
             width={700}
             height={205}
           />
@@ -90,7 +86,7 @@ function TrashYard() {
           >
             Published on:{" "}
             <Box component="span" sx={{ color: "#9AAAB5", ml: 1 }}>
-              18.12.2025
+              12.11.2025
             </Box>
           </Typography>
         </Box>
@@ -108,73 +104,67 @@ function TrashYard() {
       >
         <Typography
           variant="h4"
-          sx={{ fontWeight: "bold", fontSize: "23px", opacity: 0.87 }}
+          sx={{ fontWeight: "bolder", fontSize: "23px", opacity: 0.87 }}
         >
-          Together for a cleaner environment
+          Supporting the Flood-Affected People of Tsarevo Municipality
         </Typography>
         <Typography sx={{ color: "gray", mt: 2 }}>
-          At Next Logistic, we believe that a sustainable future begins with
-          responsible actions today. That is why, together with Bosneshki
-          Foundation, we were delighted to provide financial support to the NGO
-          Bulgarian Nature for the implementation of an environmental clean-up
-          initiative targeting an illegal landfill in the town of Maglizh.
+          After the devastating floods that affected dozens of families and
+          businesses in Tsarevo Municipality, the team of NEXT Logistic stood
+          behind the cause to help where the need was greatest. Through the
+          Bosneski Foundation, a donation was made in support of those affected
+          and the local community, with the goal of assisting in the recovery
+          process after the disaster.
         </Typography>
         <Typography sx={{ color: "gray", mt: 2 }}>
-          The initiative is part of the “Clean Future” project and aims not only
-          to restore a damaged natural area, but also to set a clear example
-          that when businesses and civil organizations join forces, real and
-          sustainable results can be achieved for the benefit of society and the
-          environment.
+          The Mayor of Tsarevo Municipality, Mr. Marin Kirov, expressed official
+          gratitude for the provided assistance through a Letter of Appreciation
+          sent on behalf of all residents of the municipality. The donation is a
+          gesture of solidarity and humanity toward the people who endured the
+          severe consequences of the natural disaster.
         </Typography>
         <Typography sx={{ color: "gray", mt: 2 }}>
-          Caring for nature is a shared responsibility – every small step
-          matters and leads to meaningful change. We are proud that our support
-          has helped secure the necessary resources for organizing this
-          important cause and for encouraging active civic engagement.
+          In a time when the floods took away homes and livelihoods, the true
+          strength of a community is measured by its willingness to lend a
+          helping hand. For us, this is not a one-time act, but an expression of
+          our belief that a responsible person stands beside others when life
+          puts them to the test. In difficult times, it is not words but actions
+          that show who we truly are.
+        </Typography>
+        <Typography sx={{ color: "gray", mt: 2 }}>
+          We sincerely thank all members of our team who stand behind these
+          efforts — with care, compassion, and responsibility.
+        </Typography>
+        <Typography sx={{ color: "gray", mt: 2 }}>
+          Anyone wishing to support those affected can make a donation to the
+          following account:
         </Typography>
         <Box
           component="div"
-          sx={{
-            mt: 3,
-            width: "100%",
-            height: "500px",
-            overflow: "hidden",
-            objectFit: "contain",
-          }}
+          sx={{ display: "flex", flexDirection: "column", mt: 2 }}
         >
-          <Image
-            src="/trash-yard-images/trash-1.png"
-            alt="Trash Yard 15"
-            width={1200}
-            height={300}
-          />
+          <Typography sx={{ color: "gray" }}>Donation Account:</Typography>
+          <Typography sx={{ color: "gray" }}>
+            IBAN: BG63 IORT 8048 3396 4778 01
+          </Typography>
+          <Typography sx={{ color: "gray" }}>Bank: Investbank AD</Typography>
+          <Typography sx={{ color: "gray" }}>
+            Account Holder: Tsarevo Municipality
+          </Typography>
         </Box>
-        <Typography sx={{ fontWeight: "bold", mt: 2, opacity: 0.87 }}>
-          Letter of appreciation
+        <Typography sx={{ color: "gray", mt: 2 }}>
+          The funds will be used to repair damages and assist affected
+          households and businesses.
         </Typography>
-        <Typography sx={{ mt: 2, color: "gray" }}>
-          We received an official letter of appreciation from NGO Bulgarian
-          Nature, in which the team behind the “Clean Future” project expressed
-          their sincere gratitude for the financial support provided and
-          emphasized the importance of partnerships between the business sector
-          and non-governmental organizations as a driving force for positive
-          change.
+        <Typography sx={{ color: "gray" }}>
+          More information can be found on the official website of the
+          municipality:
         </Typography>
-        <Typography sx={{ mt: 2, color: "gray" }}>
-          For us, this recognition is yet another confirmation that social
-          responsibility, commitment, and long-term vision are integral to the
-          values of Next Logistic.
-        </Typography>
-        <Typography sx={{ mt: 2, color: "gray" }}>
-          The initiative will be livestreamed this Saturday on the Facebook page
-          of NGO Bulgarian Nature. We invite everyone to join online, support
-          the cause, and be part of the change towards a cleaner and healthier
-          environment.
-        </Typography>
-        <Typography sx={{ mt: 2, color: "gray" }}>
-          Together we can achieve more – for nature, for society, and for the
-          future.
-        </Typography>
+        <Link href="https://tsarevo.bg/aktualno/novini/obshtina-tsarevo-otkriva-daritelska-kampaniya-v-podkrepa-na-postradalite-ot-navodnenieto-">
+          <Typography sx={{ color: "gray", textDecoration: "underline" }}>
+            Tsarevo Municipality
+          </Typography>
+        </Link>
         <Box
           sx={{
             display: "grid",
@@ -211,7 +201,7 @@ function TrashYard() {
           ))}
         </Box>
         <Dialog
-          open={!!selectedImage}
+          open={selectedImage !== null}
           onClose={() => setSelectedImage(null)}
           maxWidth="lg"
         >
@@ -226,7 +216,7 @@ function TrashYard() {
             >
               <Image
                 src={selectedImage}
-                alt="Selected Trash Yard"
+                alt="Tsarevo"
                 width={1200}
                 height={800}
                 style={{
@@ -261,4 +251,4 @@ function TrashYard() {
     </Box>
   );
 }
-export default TrashYard;
+export default ObshtinaTsarevo;
