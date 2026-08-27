@@ -1,10 +1,27 @@
-import Box from "@mui/material/Box";
+"use client";
+import { useState } from "react";
+import { Box, Dialog, Divider } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import SocialIcons from "@/components/socials/Socials";
-import Divider from "@mui/material/Divider";
-
+const images = [
+  "/trash-yard-images/trash-1.png",
+  "/trash-yard-images/trash-2.png",
+  "/trash-yard-images/trash-3.png",
+  "/trash-yard-images/trash-4.png",
+  "/trash-yard-images/trash-5.png",
+  "/trash-yard-images/trash-6.png",
+  "/trash-yard-images/trash-7.png",
+  "/trash-yard-images/trash-8.png",
+  "/trash-yard-images/trash-9.png",
+  "/trash-yard-images/trash-10.png",
+  "/trash-yard-images/trash-11.png",
+  "/trash-yard-images/trash-12.png",
+  "/trash-yard-images/trash-13.png",
+  "/trash-yard-images/trash-14.png",
+];
 function TrashYard() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   return (
     <Box
       sx={{
@@ -33,7 +50,6 @@ function TrashYard() {
           <Image
             src="/trash-yard.png"
             alt="Trash Yard"
-            layout="responsive"
             width={400}
             height={205}
           />
@@ -116,6 +132,119 @@ function TrashYard() {
           has helped secure the necessary resources for organizing this
           important cause and for encouraging active civic engagement.
         </Typography>
+        <Box
+          component="div"
+          sx={{
+            mt: 3,
+            width: "100%",
+            height: "500px",
+            overflow: "hidden",
+            objectFit: "contain",
+          }}
+        >
+          <Image
+            src="/trash-yard-images/trash-1.png"
+            alt="Trash Yard 15"
+            width={1200}
+            height={300}
+          />
+        </Box>
+        <Typography sx={{ fontWeight: "bold", mt: 2, opacity: 0.87 }}>
+          Letter of appreciation
+        </Typography>
+        <Typography sx={{ mt: 2, color: "gray" }}>
+          We received an official letter of appreciation from NGO Bulgarian
+          Nature, in which the team behind the “Clean Future” project expressed
+          their sincere gratitude for the financial support provided and
+          emphasized the importance of partnerships between the business sector
+          and non-governmental organizations as a driving force for positive
+          change.
+        </Typography>
+        <Typography sx={{ mt: 2, color: "gray" }}>
+          For us, this recognition is yet another confirmation that social
+          responsibility, commitment, and long-term vision are integral to the
+          values of Next Logistic.
+        </Typography>
+        <Typography sx={{ mt: 2, color: "gray" }}>
+          The initiative will be livestreamed this Saturday on the Facebook page
+          of NGO Bulgarian Nature. We invite everyone to join online, support
+          the cause, and be part of the change towards a cleaner and healthier
+          environment.
+        </Typography>
+        <Typography sx={{ mt: 2, color: "gray" }}>
+          Together we can achieve more – for nature, for society, and for the
+          future.
+        </Typography>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+            gap: 2,
+            mt: 5,
+          }}
+        >
+          {images.map((image, index) => (
+            <Box
+              key={image}
+              onClick={() => setSelectedImage(image)}
+              sx={{ cursor: "pointer" }}
+            >
+              <Image
+                src={image}
+                alt={`Trash Yard ${index + 1}`}
+                width={200}
+                height={200}
+              />
+            </Box>
+          ))}
+        </Box>
+        <Dialog
+          open={!!selectedImage}
+          onClose={() => setSelectedImage(null)}
+          maxWidth="lg"
+        >
+          {selectedImage && (
+            <Box
+              sx={{
+                border: "none",
+                display: "flex",
+                justifyContent: "center",
+                p: 1,
+              }}
+            >
+              <Image
+                src={selectedImage}
+                alt="Selected Trash Yard"
+                width={1200}
+                height={800}
+                style={{
+                  maxWidth: "90vw",
+                  maxHeight: "85vh",
+                  width: "auto",
+                  height: "auto",
+                  objectFit: "contain",
+                }}
+              />
+            </Box>
+          )}
+        </Dialog>
+        <Divider sx={{ mt: 4, mb: 2 }} />
+        <Box
+          component="div"
+          sx={{ display: "flex", justifyContent: "start", mt: 3 }}
+        >
+          <Typography
+            sx={{
+              color: "gray",
+              fontWeight: "bold",
+              mr: 2,
+              alignContent: "center",
+            }}
+          >
+            Share:
+          </Typography>
+          <SocialIcons />
+        </Box>
       </Box>
     </Box>
   );
