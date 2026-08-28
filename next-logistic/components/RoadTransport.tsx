@@ -100,7 +100,7 @@ function RoadTransport() {
           </article>
         </div>
         {/* Right side */}
-        <div className="bg-[#E9EFFF] rounded-bl-xl">
+        {/* <div className="bg-[#E9EFFF] rounded-bl-xl">
           <div className="flex flex-row gap-5 md:flex-wrap">
             <div className="bg-blue-600 flex flex-1 gap-2 px-5 py-10 mt-10  mx-auto rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-xl ">
               <CheckCircleIcon sx={{ color: "white", fontWeight: "bold" }} />
@@ -170,7 +170,7 @@ function RoadTransport() {
               Technology and innovation
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -1,3 +1,5 @@
+import FinancialResultsChart from "../components/charts/FinancialResults";
+
 const transportData = [
   {
     value: "11,060",
@@ -24,7 +26,7 @@ function GrowAndStrategic() {
     <section className="bg-white min-h-screen">
       <div className="px-10 py-10 flex flex-col md:flex-row gap-16">
         {/* LEFT */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-[40%]">
           <h1 className="text-sm text-blue-600 font-bold">
             Growth and Strategic Directions
             <hr className="border-t-2 border-blue-600 w-[35px] mt-2" />
@@ -100,6 +102,10 @@ function GrowAndStrategic() {
               GROWTH AND STRATEGIC DIRECTIONS
             </p>
             <p className="text-sm text-gray-500">Financial results</p>
+          </div>
+          {/*Chart */}
+          <div>
+            <FinancialResultsChart />
           </div>
         </div>
       </div>
