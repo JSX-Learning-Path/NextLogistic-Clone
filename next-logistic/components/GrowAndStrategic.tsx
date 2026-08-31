@@ -24,7 +24,7 @@ const transportData = [
 function GrowAndStrategic() {
   return (
     <section className="bg-white min-h-screen">
-      <div className="px-10 py-10 flex flex-col md:flex-row gap-16">
+      <div className="w-full px-5 py-10 md:px-10 flex flex-col md:flex-row gap-16">
         {/* LEFT */}
         <div className="w-full md:w-[40%]">
           <h1 className="text-sm text-blue-600 font-bold">
@@ -48,7 +48,7 @@ function GrowAndStrategic() {
             {transportData.map((data) => (
               <div
                 key={data.type}
-                className="grid grid-cols-[220px_1fr_100px] items-center border-b border-gray-400 py-3"
+                className="grid grid-cols-[1fr_auto] sm:grid-cols-[1fr_1fr_100px] items-center border-b border-gray-400 py-3 gap-3"
               >
                 <div className="flex items-center gap-3">
                   <span

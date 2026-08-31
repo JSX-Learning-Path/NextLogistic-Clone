@@ -12,9 +12,9 @@ import DirectionsBoatFilledIcon from "@mui/icons-material/DirectionsBoatFilled";
 function WhyChooseUs() {
   return (
     <section className="w-full min-h-screen">
-      <div className="flex flex-col min-h-[650px] w-full md:flex-row mt-10">
+      <div className="flex flex-col  min-h-[650px] w-full md:flex-row mt-10">
         {/* Left */}
-        <div className="w-full md:w-1/2 md:max-w-[850px] px-8 md:px-16 md:flex md:flex-col lg:px-20">
+        <div className="w-full md:w-1/2 md:max-w-[850px] px-8 md:px-16 md:flex md:flex-col lg:px-20 lg:mt-10">
           <h5 className="text-blue-600 font-bold uppercase">Why Choose Us</h5>
           <hr className="mt-2 w-[35px] border-blue-600" />
           <h2 className="text-xl font-bold leading-tight md:text-4xl lg:text-3xl mt-3">
@@ -83,7 +83,9 @@ function WhyChooseUs() {
               <Image
                 src="/5-1/girl.png"
                 alt="Girl"
+                loading="eager"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
               <div
@@ -120,6 +122,7 @@ function WhyChooseUs() {
                 src="/5-1/vsCode.png"
                 alt="VS Code"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
               <div
@@ -155,6 +158,8 @@ function WhyChooseUs() {
                 src="/5-1/green-logistic.png"
                 alt="Green Logistic"
                 fill
+                loading="eager"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
               <div
@@ -190,6 +195,7 @@ function WhyChooseUs() {
                 src="/5-1/education.png"
                 alt="Education"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-top object-cover"
               />
               <div

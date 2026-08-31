@@ -152,6 +152,7 @@ const Hero = () => {
               alt="Aside Next Logo"
               width={320}
               height={250}
+              className="h-auto"
             />
 
             <div className="absolute bottom-8 inset-0 flex items-center justify-center">

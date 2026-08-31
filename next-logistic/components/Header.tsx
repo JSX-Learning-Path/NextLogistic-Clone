@@ -41,6 +41,7 @@ const Header = () => {
             <Image
               src={image}
               alt="Nextlogistic"
+              priority
               className="block w-[78px] h-auto"
             />
           </Link>
