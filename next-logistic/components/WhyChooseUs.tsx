@@ -14,14 +14,14 @@ function WhyChooseUs() {
     <section className="w-full min-h-screen">
       <div className="flex flex-col  min-h-[650px] w-full md:flex-row mt-10">
         {/* Left */}
-        <div className="w-full md:w-1/2 md:max-w-[850px] px-8 md:px-16 md:flex md:flex-col lg:px-20 lg:mt-10">
+        <div className="w-full md:w-1/2 text-xl px-8 md:px-16 md:flex md:flex-col lg:px-20 lg:mt-10 ">
           <h5 className="text-blue-600 font-bold uppercase">Why Choose Us</h5>
           <hr className="mt-2 w-[35px] border-blue-600" />
-          <h2 className="text-xl font-bold leading-tight md:text-4xl lg:text-3xl mt-3">
+          <h2 className="text- font-bold leading-tight md:text-4xl lg:text-3xl mt-3">
             Your confidant{" "}
             <span className="text-blue-600"> partner in logistics</span>
           </h2>
-          <p className="mt-3 text-sm leading-6 md:text-base">
+          <p className="mt-3 text-sm leading-6 md:text-base opacity-80">
             Our main goal is to provide the best logistics solution that not
             only optimizes costs but also ensures full control over every stage
             of the process, guaranteeing reliable delivery.
@@ -29,10 +29,10 @@ function WhyChooseUs() {
           <div className="flex flex-row items-center gap-3 mt-5">
             <SpeedIcon
               className="text-blue-500 bg-blue-100 rounded-full p-1"
-              sx={{ fontSize: 30 }}
+              sx={{ fontSize: 40 }}
             />
 
-            <p>
+            <p className="opacity-80">
               <span className="font-bold">Speed and flexibility:</span> In the
               dynamic world of modern business, every minute is precious, we
               understand that speed and flexibility are key to our clients'
@@ -42,9 +42,9 @@ function WhyChooseUs() {
           <div className="flex flex-row items-center gap-3 mt-5">
             <LocationOnIcon
               className="text-blue-500 bg-blue-100  rounded-full p-1"
-              sx={{ fontSize: 30 }}
+              sx={{ fontSize: 40 }}
             />
-            <p>
+            <p className="opacity-80">
               <span className="font-bold">Accessibility:</span> Our deliveries
               cover a wide range of destinations, ensuring seamless service even
               in remote and hard-to-reach areas.
@@ -53,9 +53,9 @@ function WhyChooseUs() {
           <div className="flex flex-row items-center gap-3 mt-5">
             <WorkIcon
               className="text-blue-500 bg-blue-100  rounded-full p-1"
-              sx={{ fontSize: 30 }}
+              sx={{ fontSize: 40 }}
             />
-            <p>
+            <p className="opacity-80">
               <span className="font-bold">Professional approach:</span> We
               guarantee high standards of service and complete security during
               transportation, every stage of the process is carried out with
@@ -65,9 +65,9 @@ function WhyChooseUs() {
           <div className="flex flex-row items-center gap-3 mt-5">
             <QueryStatsIcon
               className="text-blue-500 bg-blue-100  rounded-full p-1"
-              sx={{ fontSize: 30 }}
+              sx={{ fontSize: 40 }}
             />
-            <p>
+            <p className="opacity-80">
               <span className="font-bold">Data-driven decisions:</span> We use
               advanced analytics and real-time data to optimize logistics
               processes, ensuring maximum efficiency and cost-effectiveness.
@@ -78,7 +78,7 @@ function WhyChooseUs() {
         {/* Right */}
         <div className="w-full mt-5 px-5 md:w-1/2 xl:w-1/2 ">
           {/* Image */}
-          <div className="grid grid-cols-2 grid-rows-2 ">
+          <div className="grid grid-cols-2 grid-rows-2 gap-1 ">
             <div className="relative min-h-[350px] flex items-center">
               <Image
                 src="/5-1/girl.png"

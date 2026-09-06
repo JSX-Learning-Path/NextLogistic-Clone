@@ -259,7 +259,7 @@ const Header = () => {
                     </span>
                     <div>
                       <Link
-                        href="/academy"
+                        href="/interModalTransport"
                         className="block py-1 text-gray-700 font-bold"
                       >
                         Intermodal Transport
@@ -275,7 +275,7 @@ const Header = () => {
                     </span>
                     <div>
                       <Link
-                        href="/railwayTransport"
+                        href="/rail-transport"
                         className="block py-1 text-gray-700 font-bold"
                       >
                         Rail Transport
@@ -291,7 +291,7 @@ const Header = () => {
                     </span>
                     <div>
                       <Link
-                        href="/combinedTransport"
+                        href="/combined-transport"
                         className="block py-1 text-gray-700 font-bold"
                       >
                         Combined Transport

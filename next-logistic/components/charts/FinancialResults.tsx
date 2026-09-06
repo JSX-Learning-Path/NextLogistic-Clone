@@ -33,7 +33,7 @@ const chartConfig = {
 export default function FinancialResults() {
   return (
     <div className="w-full ">
-      <ChartContainer config={chartConfig} className="mt-4 h-[320px] w-full">
+      <ChartContainer config={chartConfig} className="mt-4 h-[270px] w-full">
         <BarChart
           data={data}
           margin={{
