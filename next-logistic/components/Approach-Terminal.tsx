@@ -21,26 +21,19 @@ function ApproachTerminal() {
           {/* Content */}
           <div className="absolute inset-0 z-20 flex flex-col justify-center px-8 text-white md:px-16 lg:px-20">
             <h6 className="text-sm font-bold uppercase">
-              Monitoring
+              Operational approach
               <hr className="mt-2 w-[35px] border-white" />
             </h6>
 
             <h2 className="mt-3 max-w-[650px] text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
-              Data that ensure accuracy
-              <br />
-              and control
+              A sustainable path to modern logistics
             </h2>
 
             <p className="mt-5 max-w-[650px] text-sm leading-6 md:text-base">
-              Our systems provide precise control over every movement of the
-              cargo. Thanks to our internal infrastructure, we plan with high
-              accuracy and ensure timely and secure delivery — with minimal
-              involvement required from the client.
+              Intermodal transport is not just a method but a vision for the
+              future - one where we unite the different transport modes (road,
+              rail and sea) into a single optimised and efficient cargo journey.
             </p>
-
-            <Link href="/#" className="mt-8 text-sm font-medium">
-              Read more ￫
-            </Link>
           </div>
         </div>
 
@@ -60,26 +53,19 @@ function ApproachTerminal() {
           {/* Content */}
           <div className="absolute inset-0 z-20 flex flex-col justify-center px-8 text-white md:px-16 lg:px-20">
             <h6 className="text-sm font-bold uppercase">
-              Green Logistics
+              About the terminal
               <hr className="mt-2 w-[35px] border-white" />
             </h6>
 
             <h2 className="mt-3 max-w-[650px] text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
-              Data that ensure accuracy
-              <br />
-              and control
+              The first intermodal terminal in Bulgaria
             </h2>
 
             <p className="mt-5 max-w-[650px] text-sm leading-6 md:text-base">
-              Our systems provide precise control over every movement of the
-              cargo. Thanks to our internal infrastructure, we plan with high
-              accuracy and ensure timely and secure delivery — with minimal
-              involvement required from the client.
+              With a total area of 77,342 sq.m and a 6,500 sq.m parking zone,
+              the terminal meets all European safety and efficiency standards
+              and features a dedicated zone for cooling and heating containers.
             </p>
-
-            <Link href="/#" className="mt-8 text-sm font-medium">
-              Read more ￫
-            </Link>
           </div>
         </div>
       </div>

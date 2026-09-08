@@ -12,65 +12,64 @@ import DirectionsBoatFilledIcon from "@mui/icons-material/DirectionsBoatFilled";
 function WhyChooseUs() {
   return (
     <section className="w-full min-h-screen">
-      <div className="flex flex-col  min-h-[650px] w-full md:flex-row mt-10">
+      <div className="flex flex-col min-h-[650px] w-full md:flex-row mt-10">
         {/* Left */}
         <div className="w-full md:w-1/2 text-xl px-8 md:px-16 md:flex md:flex-col lg:px-20 lg:mt-10 ">
           <h5 className="text-blue-600 font-bold uppercase">Why Choose Us</h5>
           <hr className="mt-2 w-[35px] border-blue-600" />
           <h2 className="text- font-bold leading-tight md:text-4xl lg:text-3xl mt-3">
-            Your confidant{" "}
-            <span className="text-blue-600"> partner in logistics</span>
+            Your trusted{" "}
+            <span className="text-blue-600"> logistic partner</span>
           </h2>
           <p className="mt-3 text-sm leading-6 md:text-base opacity-80">
             Our main goal is to provide the best logistics solution that not
             only optimizes costs but also ensures full control over every stage
             of the process, guaranteeing reliable delivery.
           </p>
-          <div className="flex flex-row items-center gap-3 mt-5">
+          <div className="flex flex-row gap-3 mt-5">
             <SpeedIcon
               className="text-blue-500 bg-blue-100 rounded-full p-1"
-              sx={{ fontSize: 40 }}
+              sx={{ fontSize: 30 }}
             />
 
             <p className="opacity-80">
               <span className="font-bold">Speed and flexibility:</span> In the
-              dynamic world of modern business, every minute is precious, we
-              understand that speed and flexibility are key to our clients'
-              success.
+              fast-moving world of modern business, every minute counts - we
+              know speed and flexibility are key to our clients' success.
             </p>
           </div>
-          <div className="flex flex-row items-center gap-3 mt-5">
+          <div className="flex flex-row  gap-3 mt-5">
             <LocationOnIcon
               className="text-blue-500 bg-blue-100  rounded-full p-1"
-              sx={{ fontSize: 40 }}
+              sx={{ fontSize: 30 }}
             />
             <p className="opacity-80">
-              <span className="font-bold">Accessibility:</span> Our deliveries
-              cover a wide range of destinations, ensuring seamless service even
-              in remote and hard-to-reach areas.
+              <span className="font-bold">Reach:</span> Our deliveries cover a
+              wide range of destinations, ensuring seamless service even in
+              remote and hard-to-reach areas.
             </p>
           </div>
-          <div className="flex flex-row items-center gap-3 mt-5">
+          <div className="flex flex-row  gap-3 mt-7">
             <WorkIcon
               className="text-blue-500 bg-blue-100  rounded-full p-1"
-              sx={{ fontSize: 40 }}
+              sx={{ fontSize: 30 }}
             />
             <p className="opacity-80">
               <span className="font-bold">Professional approach:</span> We
-              guarantee high standards of service and complete security during
-              transportation, every stage of the process is carried out with
+              guarantee high service standards and full security during
+              transport; every stage of the process is carried out with
               attention to detail.
             </p>
           </div>
-          <div className="flex flex-row items-center gap-3 mt-5">
+          <div className="flex flex-row  gap-3 mt-5">
             <QueryStatsIcon
               className="text-blue-500 bg-blue-100  rounded-full p-1"
-              sx={{ fontSize: 40 }}
+              sx={{ fontSize: 30 }}
             />
             <p className="opacity-80">
-              <span className="font-bold">Data-driven decisions:</span> We use
-              advanced analytics and real-time data to optimize logistics
-              processes, ensuring maximum efficiency and cost-effectiveness.
+              <span className="font-bold">Efficiency: </span> Through strategic
+              organisation and process optimisation, we offer cost-effective
+              solutions that raise productivity and cut unnecessary expense.
             </p>
           </div>
         </div>
@@ -85,7 +84,7 @@ function WhyChooseUs() {
                 alt="Girl"
                 loading="eager"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                // sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
               <div

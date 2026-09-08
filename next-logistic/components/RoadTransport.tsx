@@ -103,7 +103,7 @@ function RoadTransport() {
           </article>
         </div>
         {/* Right side */}
-        <div className="bg-[#EEF3FF] w-full flex md:flex-col md:w-1/2 md:flex rounded-xl md:py-10 md:px-5 gap-5">
+        <div className="bg-[#EEF3FF] w-full flex flex-col md:flex-col md:w-1/2 md:flex rounded-xl md:py-10 md:px-5 gap-5">
           <div className="flex items-start gap-5">
             <div className="hidden md:flex md:w-1/2 gap-2 px-5 pb-20 pt-10 bg-blue-600 rounded-xl">
               <CheckCircleIcon sx={{ color: "white" }} />
