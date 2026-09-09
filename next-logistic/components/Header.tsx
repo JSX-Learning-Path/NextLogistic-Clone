@@ -18,22 +18,27 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import SummarizeIcon from "@mui/icons-material/Summarize";
+import PolicyIcon from "@mui/icons-material/Policy";
+import SettingsEthernetIcon from "@mui/icons-material/SettingsEthernet";
+
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openCompany, setOpenCompany] = useState(false);
+  const [policiesOpen, setPoliciesOpen] = useState(false);
   const [transport, setOpenTransport] = useState(false);
   const closeMobileMenu = () => {
     setMobileOpen(false);
     setOpenCompany(false);
+    setPoliciesOpen(false);
     setOpenTransport(false);
   };
   const pathname = usePathname();
 
   return (
-    <header className="fixed w-full bg-white shadow-md z-50 md:fixed ">
+    <header className="fixed w-full bg-[#F8FAFC] shadow-md z-50 md:fixed ">
       <nav className="max-w-7xl mx-auto flex justify-between items-center p-4">
         {/* Left: logo */}
         <div className="flex items-center gap-5">
@@ -48,33 +53,33 @@ const Header = () => {
         </div>
 
         {/* Center navigation */}
-        <div className="hidden  xl:flex flex-1 justify-center">
+        <div className="hidden  xl:flex flex-1 justify-start ml-30">
           <nav className="flex items-center gap-8" aria-label="Main menu">
             <Link
               href="/"
               className={
                 pathname === "/"
-                  ? "text-sm font-bold text-blue-500 cursor-pointer"
-                  : "text-sm font-bold text-gray-500 cursor-pointer"
+                  ? "  text-blue-500 cursor-pointer"
+                  : " text-black/80 cursor-pointer"
               }
             >
               Home
             </Link>
             <div className="relative group">
-              <button className="flex items-center gap-1 text-sm font-bold text-gray-500 cursor-pointer">
+              <button className="flex items-center gap-1 text-l text-black/80 cursor-pointer">
                 Company
                 <span className="ml-1">▾</span>
               </button>
-              <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all absolute  mt-2 w-156 bg-white shadow-lg rounded p-3 z-10 ">
-                <ul className="space-y-1 text-sm grid grid-cols-2 gap-5">
-                  <li className="flex items-center gap-2 hover:bg-blue-100/50  p-2 rounded transition">
-                    <span className="items-center gap-2 bg-blue-100/50 text-blue-400 p-2">
-                      <BusinessIcon className="w-3 h-3" />
+              <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all absolute  mt-2 w-156 bg-white shadow-lg rounded-xl p-3 z-10 ">
+                <ul className="space-y-1 text-sm grid grid-cols-2">
+                  <li className="flex items-center gap-2 hover:bg-blue-100/30  p-2 rounded transition">
+                    <span className="items-center gap-2 text-blue-500 p-2">
+                      <BusinessIcon />
                     </span>
                     <div className="flex flex-col">
                       <Link
                         href="/about"
-                        className="block p-1 text-gray-700 font-bold"
+                        className="block p-1 text-black/80 font-bold"
                       >
                         About us
                       </Link>
@@ -84,14 +89,14 @@ const Header = () => {
                       </p>
                     </div>
                   </li>
-                  <li className="flex items-center gap-2 hover:bg-blue-100/50  p-2 rounded transition">
-                    <span className="items-center gap-2 bg-blue-100/50 text-blue-400 p-2">
-                      <SchoolIcon className="w-3 h-3" />
+                  <li className="flex items-center gap-2 hover:bg-blue-100/30  p-2 rounded transition">
+                    <span className="items-center gap-2 text-blue-500 p-2">
+                      <SchoolIcon />
                     </span>
                     <div className="flex flex-col">
                       <Link
                         href="/academy"
-                        className="block p-1 text-gray-700 font-bold"
+                        className="block p-1 text-black/80 font-bold"
                       >
                         Academy
                       </Link>
@@ -100,9 +105,9 @@ const Header = () => {
                       </p>
                     </div>
                   </li>
-                  <li className="flex items-center gap-2 hover:bg-blue-100/50  p-2 rounded transition">
-                    <span className="items-center gap-2 bg-blue-100/50 text-blue-400 p-2">
-                      <WorkIcon className="w-3 h-3" />
+                  <li className="flex items-center gap-2 hover:bg-blue-100/30  p-2 rounded transition">
+                    <span className="items-center gap-2  text-blue-500 p-2">
+                      <WorkIcon />
                     </span>
                     <div className="flex flex-col">
                       <Link
@@ -116,9 +121,9 @@ const Header = () => {
                       </p>
                     </div>
                   </li>
-                  <li className="flex items-center gap-2 hover:bg-blue-100/50  p-2 rounded transition">
-                    <span className="items-center gap-2 bg-blue-100/50 text-blue-400 p-2">
-                      <VolunteerActivismIcon className="w-3 h-3" />
+                  <li className="flex items-center gap-2 hover:bg-blue-100/30  p-2 rounded transition">
+                    <span className="items-center gap-2 text-blue-500 p-2">
+                      <VolunteerActivismIcon />
                     </span>
                     <div className="flex flex-col">
                       <Link
@@ -132,13 +137,13 @@ const Header = () => {
                       </p>
                     </div>
                   </li>
-                  <li className="flex items-center gap-2 hover:bg-blue-100/50  p-2 rounded transition">
-                    <span className="items-center gap-2 bg-blue-100/50 text-blue-400 p-2">
-                      <LightbulbIcon className="w-3 h-3" />
+                  <li className="flex items-center gap-2 hover:bg-blue-100/30  p-2 rounded transition">
+                    <span className="items-center gap-2  text-blue-500 p-2">
+                      <SettingsEthernetIcon />
                     </span>
                     <div className="flex flex-col">
                       <Link
-                        href="/techlogies"
+                        href="/technologies"
                         className="block p-1 text-gray-700 font-bold"
                       >
                         Technology
@@ -148,9 +153,9 @@ const Header = () => {
                       </p>
                     </div>
                   </li>
-                  <li className="flex items-center gap-2 hover:bg-blue-100/50  p-2 rounded transition">
-                    <span className="items-center gap-2 bg-blue-100/50 text-blue-400 p-2">
-                      <EnergySavingsLeafIcon className="w-3 h-3" />
+                  <li className="flex items-center gap-2 hover:bg-blue-100/30  p-2 rounded transition">
+                    <span className="items-center gap-2 text-blue-500 p-2">
+                      <EnergySavingsLeafIcon />
                     </span>
                     <div className="flex flex-col">
                       <Link
@@ -164,75 +169,223 @@ const Header = () => {
                       </p>
                     </div>
                   </li>
+
+                  {/* Policies */}
+                  <div className="col-span-2 mt-3 rounded">
+                    <li
+                      className={`flex items-center gap-2 p-2 rounded transition cursor-pointer ${
+                        policiesOpen ? "bg-blue-50" : "hover:bg-blue-100/30"
+                      }`}
+                      onClick={() => setPoliciesOpen((isOpen) => !isOpen)}
+                      aria-expanded={policiesOpen}
+                      aria-controls="policies-menu"
+                    >
+                      <span className="items-center gap-2 text-blue-500 p-2">
+                        <PolicyIcon />
+                      </span>
+                      <div className="flex flex-1 flex-col">
+                        <span
+                          className={`block p-1 font-bold ${
+                            policiesOpen ? "text-blue-600" : "text-black/80"
+                          }`}
+                        >
+                          Company Policies
+                        </span>
+                        <p className="px-1 text-sm text-gray-500">
+                          Transparency &amp; Corporate Responsibility
+                        </p>
+                      </div>
+                      <span
+                        className={`mr-2 text-blue-600 transition-transform ${
+                          policiesOpen ? "rotate-180" : ""
+                        }`}
+                      >
+                        ▾
+                      </span>
+                    </li>
+
+                    <div
+                      id="policies-menu"
+                      className={`col-span-2 grid grid-cols-2 grid-rows-2 gap-5 rounded bg-[#FAFBFC] px-5 py-5 overflow-hidden transition-all duration-300 ${
+                        policiesOpen ? "max-h-[500px]" : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
+                        <Link
+                          href="/policies/code-of-ethics"
+                          className="flex items-center"
+                        >
+                          <SummarizeIcon
+                            sx={{
+                              width: 35,
+                              height: 35,
+                              color: "#64748B",
+                              backgroundColor: "#F1F5F9",
+                              padding: "5px",
+                              borderRadius: "10px",
+                              marginRight: "12px",
+                            }}
+                          />
+                          Code of Ethics
+                        </Link>
+                      </div>
+                      <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
+                        <Link
+                          href="/policies/human-right-policy"
+                          className="flex items-center"
+                        >
+                          <SummarizeIcon
+                            sx={{
+                              width: 35,
+                              height: 35,
+                              color: "#64748B",
+                              backgroundColor: "#F1F5F9",
+                              padding: "5px",
+                              borderRadius: "10px",
+                              marginRight: "12px",
+                            }}
+                          />
+                          Human Rights Policy
+                        </Link>
+                      </div>
+                      <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
+                        <Link
+                          href="/policies/logistic-sustainability"
+                          className="flex items-center"
+                        >
+                          <SummarizeIcon
+                            sx={{
+                              width: 35,
+                              height: 35,
+                              color: "#64748B",
+                              backgroundColor: "#F1F5F9",
+                              padding: "5px",
+                              borderRadius: "10px",
+                              marginRight: "12px",
+                            }}
+                          />
+                          Logistic Sustainability Policy
+                        </Link>
+                      </div>
+                      <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
+                        <Link
+                          href="/policies/diversity-inclusion-policy"
+                          className="flex items-center"
+                        >
+                          <SummarizeIcon
+                            sx={{
+                              width: 35,
+                              height: 35,
+                              color: "#64748B",
+                              backgroundColor: "#F1F5F9",
+                              padding: "5px",
+                              borderRadius: "10px",
+                              marginRight: "12px",
+                            }}
+                          />
+                          Diversity and inclusion policy
+                        </Link>
+                      </div>
+                      <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
+                        <Link
+                          href="/policies/corporate-socials-rensponsibility"
+                          className="flex items-center"
+                        >
+                          <SummarizeIcon
+                            sx={{
+                              width: 35,
+                              height: 35,
+                              color: "#64748B",
+                              backgroundColor: "#F1F5F9",
+                              padding: "5px",
+                              borderRadius: "10px",
+                              marginRight: "12px",
+                            }}
+                          />
+                          Corporate Social Responsibility (CSR) Policy
+                        </Link>
+                      </div>
+                      <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
+                        <Link
+                          href="/policies/energy-management-policy"
+                          className="flex items-center"
+                        >
+                          <SummarizeIcon
+                            sx={{
+                              width: 35,
+                              height: 35,
+                              color: "#64748B",
+                              backgroundColor: "#F1F5F9",
+                              padding: "5px",
+                              borderRadius: "10px",
+                              marginRight: "12px",
+                            }}
+                          />
+                          Energy Management policy
+                        </Link>
+                      </div>
+                      <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
+                        <Link
+                          href="/policies/code-of-conduct-for-suppliers"
+                          className="flex items-center"
+                        >
+                          <SummarizeIcon
+                            sx={{
+                              width: 35,
+                              height: 35,
+                              color: "#64748B",
+                              backgroundColor: "#F1F5F9",
+                              padding: "5px",
+                              borderRadius: "10px",
+                              marginRight: "12px",
+                            }}
+                          />
+                          Code of conduct for suppliers and business partners
+                        </Link>
+                      </div>
+                      <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
+                        <Link href="/" className="flex items-center">
+                          <SummarizeIcon
+                            sx={{
+                              width: 35,
+                              height: 35,
+                              color: "#64748B",
+                              backgroundColor: "#F1F5F9",
+                              padding: "5px",
+                              borderRadius: "10px",
+                              marginRight: "12px",
+                            }}
+                          />
+                          Report Registration Form
+                        </Link>
+                      </div>
+                      <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
+                        <Link
+                          href="/policies/environmental-policy"
+                          className="flex items-center"
+                        >
+                          <SummarizeIcon
+                            sx={{
+                              width: 35,
+                              height: 35,
+                              color: "#64748B",
+                              backgroundColor: "#F1F5F9",
+                              padding: "5px",
+                              borderRadius: "10px",
+                              marginRight: "12px",
+                            }}
+                          />
+                          Environmental policy
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 </ul>
-                {/* Policies */}
-                <div className="grid grid-cols-2 gap-5 mt-3 bg-gray-100/50 p-5 rounded">
-                  <div className="flex items-center text-black text-sm">
-                    <Link href="/policies/code-of-ethics">
-                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
-                      Code of Ethics
-                    </Link>
-                  </div>
-                  <div className="flex items-center text-black text-sm">
-                    <Link href="/policies/human-right-policy">
-                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400 " />
-                      Human Rights Policy
-                    </Link>
-                  </div>
-                  <div className="flex items-center text-black text-sm">
-                    <Link href="/policies/logistic-sustainability">
-                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
-                      Logistic Sustainability Policy
-                    </Link>
-                  </div>
-                  <div className="flex items-center text-black text-sm">
-                    <Link href="/policies/diversity-inclusion-policy">
-                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
-                      Diversity and inclusion policy
-                    </Link>
-                  </div>
-                  <div className="flex items-center text-black text-sm">
-                    <Link href="/policies/corporate-socials-rensponsibility">
-                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
-                      Corporate Social Responsibility (CSR) Policy
-                    </Link>
-                  </div>
-                  <div className="flex items-center text-black text-sm">
-                    <Link href="/policies/energy-management-policy">
-                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
-                      Energy Management policy
-                    </Link>
-                  </div>
-                  <div className="flex items-center text-black text-sm">
-                    <Link href="/policies/code-of-conduct-for-suppliers">
-                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
-                      Code of conduct for suppliers and business partners
-                    </Link>
-                  </div>
-                  <div className="flex items-center text-black text-sm">
-                    <Link href="/policies/anti-corruption-policy">
-                      <SummarizeIcon className="w-2 h-5 mr-2 text-blue-400" />
-                      Anti-corruption and anti-bribery policy
-                    </Link>
-                  </div>
-                  <div className="flex items-center text-black text-sm">
-                    <Link href="/">
-                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
-                      Report Registration Form
-                    </Link>
-                  </div>
-                  <div className="flex items-center text-black text-sm">
-                    <Link href="/policies/environmental-policy">
-                      <SummarizeIcon className="w-4 h-4 mr-2 text-blue-400" />
-                      Environmental policy
-                    </Link>
-                  </div>
-                </div>
               </div>
             </div>
 
             <div className="relative group">
-              <button className="flex items-center gap-1 text-sm font-bold text-gray-500 cursor-pointer">
+              <button className="flex items-center gap-1 text-l text-black/80 cursor-pointer">
                 Transport <span className="ml-1">▾</span>
               </button>
               <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all absolute left-0 mt-2 w-156 bg-white shadow-lg rounded p-3 z-10">
@@ -378,8 +531,8 @@ const Header = () => {
               href="/news"
               className={
                 pathname === "/news"
-                  ? "block py-1 text-sm font-bold text-blue-500"
-                  : "block py-1 text-sm font-bold text-gray-500"
+                  ? "block py-1  text-blue-500"
+                  : "block py-1  text-black/80"
               }
             >
               News
@@ -388,8 +541,8 @@ const Header = () => {
               href="/contact"
               className={
                 pathname === "/contact"
-                  ? "block py-1 text-sm font-bold text-blue-500"
-                  : "block py-1 text-sm font-bold text-gray-500"
+                  ? "block py-1  text-blue-500"
+                  : "block py-1  text-black/80"
               }
             >
               Contact
@@ -398,14 +551,14 @@ const Header = () => {
         </div>
 
         {/* Right: socials + mobile menu */}
-        <div className="flex items-center gap-5 md:gap-4">
-          <div className="flex items-center gap-3 md:gap-3">
+        <div className="flex items-center gap-5 md:gap-4 xl:border-l xl:border-gray-300">
+          <div className="flex items-center gap-3 md:gap-3 md:ml-5">
             <Link
               href="https://www.linkedin.com/company/nextlogistic/posts/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Linkedin"
-              className="text-blue-600"
+              className="text-[#2066C2]"
             >
               <LinkedInIcon />
             </Link>
@@ -414,7 +567,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="text-blue-600"
+              className="text-[#2977F2]"
             >
               <FacebookIcon />
             </Link>
@@ -423,7 +576,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="text-blue-600"
+              className="text-[#E44C80]"
             >
               <InstagramIcon />
             </Link>
@@ -499,12 +652,12 @@ const Header = () => {
                     : "grid grid-rows-[0fr] opacity-0 mt-0 transition-all duration-300 ease-out "
                 }
               >
-                <ul className="overflow-hidden space-y-2 pl-1  bg-gray-100/50 py-2 rounded ">
+                <ul className="overflow-hidden space-y-2 pl-1 bg-gray-100/50 py-2 rounded ">
                   <li>
                     <Link
                       href="/about"
                       onClick={closeMobileMenu}
-                      className="block  text-gray-700"
+                      className="block  text-gray-800"
                     >
                       About Us
                     </Link>
@@ -513,7 +666,7 @@ const Header = () => {
                     <Link
                       href="/academy"
                       onClick={closeMobileMenu}
-                      className="block  text-gray-700"
+                      className="block  text-gray-800"
                     >
                       Academy
                     </Link>
@@ -522,7 +675,7 @@ const Header = () => {
                     <Link
                       href="/careers"
                       onClick={closeMobileMenu}
-                      className="block  text-gray-700"
+                      className="block  text-gray-800"
                     >
                       Careers
                     </Link>
