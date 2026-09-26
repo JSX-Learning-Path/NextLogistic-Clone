@@ -343,7 +343,7 @@ const Header = () => {
                           Code of conduct for suppliers and business partners
                         </Link>
                       </div>
-                      <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
+                      {/* <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
                         <Link href="/" className="flex items-center">
                           <SummarizeIcon
                             sx={{
@@ -358,7 +358,7 @@ const Header = () => {
                           />
                           Report Registration Form
                         </Link>
-                      </div>
+                      </div> */}
                       <div className="flex items-center text-black text-sm hover:bg-blue-100/50 transition p-2 rounded">
                         <Link
                           href="/policies/environmental-policy"

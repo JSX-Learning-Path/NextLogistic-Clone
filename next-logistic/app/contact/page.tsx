@@ -5,6 +5,8 @@ import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import PlaceIcon from "@mui/icons-material/Place";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Link from "next/link";
 import { useState } from "react";
@@ -18,141 +20,190 @@ function ContactPage() {
   };
 
   return (
-    <section className="bg-blue-50  ">
-      <div className="flex flex-col mt-25 gap-10 md:gap-20 items-center justify-center p-5 md:p-10 bg-blue-50 lg:flex-row lg:items-start lg:justify-center lg:gap-5">
-        <div className="bg-white w-full mx-5 p-5 rounded-lg lg:w-1/3 shadow-md ">
-          <h2 className="text-black text-xl mb-2 font-bold p-2">Contact us</h2>
-          <div className="flex flex-col p-2">
-            <p className="text-gray-700 text-lg ">
-              You can contact our team by phone, email, or by filling out the
-              form below.
+    <section className="bg-[rgb(238,242,251)]  mt-10">
+      <div className="flex justify-center p-5 md:p-10">
+        <div className="w-full max-w-5xl overflow-hidden rounded-3xl shadow-xl flex flex-col lg:flex-row">
+          {/* Left - form */}
+          <div className="bg-white w-full lg:w-1/2 p-8 md:p-12">
+            <h2 className="text-black text-3xl md:text-4xl font-serif font-bold mb-4">
+            Contact us
+            </h2>
+            <p className="text-gray-600 text-base mb-6">
+             You can reach our team by phone, by email, or by filling in the form below. We process your personal data in accordance with our {" "}
+              <Link
+                href="/privacy-policy"
+                className="text-blue-600 font-medium underline"
+              >
+                Privacy Policy
+              </Link>
+              .
             </p>
-            <p className="text-gray-700 text-lg ">
-              We process your personal data in accordance with our Privacy
-              Policy.
-            </p>
-          </div>
-          <div className="flex flex-col mt-4 md:grid md:grid-cols-2 gap-4 p-5">
-            <input
-              type="text"
-              placeholder="URN"
-              className="border rounded-md border-gray-300 p-2 mb-2 placeholder:text-black "
-            />
 
-            <input
-              type="text"
-              placeholder="Name"
-              className="border rounded-md border-gray-300 p-2 mb-2 placeholder:text-black placeholder:opacity-90"
-            />
-
-            <input
-              type="text"
-              placeholder="Email"
-              className="border rounded-md border-gray-300 p-2 mb-2 placeholder:text-black placeholder:opacity-70"
-            />
-
-            <input
-              type="text"
-              placeholder="Phone"
-              className="border rounded-md border-gray-300 p-2 mb-2 placeholder:text-black placeholder:opacity-70"
-            />
-
-            <textarea
-              placeholder="How can we help you?"
-              className="w-full border-2 border-gray-300 rounded-md p-2 mb-2 resize-none placeholder:text-black placeholder:opacity-70 md:col-span-2"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-blue-600 text-white text-2xl  rounded-md p-2 mb-2 md:col-span-2 cursor-pointer"
-            >
-              Make an appointment
-            </button>
-          </div>
-        </div>
-        <div className="flex flex-col gap-4 ">
-          <div className="bg-white p-8 rounded-lg shadow-md w-full ">
-            <h2 className="text-black  mb-2 font-bold">Contacts</h2>
-            <p className="text-gray-700 text-lg">
-              We will respond to your inquiries as quickly as possible and will
-              be happy to help you!
-            </p>
-            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between lg:w-full">
-              <div className="flex flex-col gap-3">
-                <p className="text-gray-700 text-lg">
-                  <LocalPhoneIcon className="inline-block mr-2 text-blue-600" />
-                  +359 893 406 767
-                </p>
-                <p className="text-gray-700 text-lg">
-                  <EmailIcon className="inline-block mr-2 text-blue-600" />
-                  office@nextlogistic.eu
-                </p>
+            <form className="flex flex-col gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <input
+                  type="text"
+                  placeholder="Company Name"
+                  className="border rounded-lg border-gray-300 p-3 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  className="border rounded-lg border-gray-300 p-3 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="border rounded-lg border-gray-300 p-3 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone"
+                  className="border rounded-lg border-gray-300 p-3 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
               </div>
 
-              <div className="flex items-center gap-2">
-                <Link
-                  href="https://www.facebook.com/nextlogistic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-blue-600 text-blue-600"
-                >
-                  <FacebookIcon className="text-[18px]" />
-                </Link>
+              <textarea
+                placeholder="How can we help you?"
+                rows={4}
+                className="w-full border rounded-lg border-gray-300 p-3 resize-none placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
 
-                <Link
-                  href="https://www.instagram.com/nextlogistic.eu/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-blue-600 text-blue-600"
-                >
-                  <InstagramIcon className="text-[18px]" />
-                </Link>
+              <button
+                type="submit"
+                className="bg-blue-600 hover:bg-blue-700 transition-colors text-white text-lg font-medium rounded-lg p-3 mt-2 cursor-pointer"
+              >
+               Send enquiry
+              </button>
 
+              <p className="text-center text-sm text-gray-500 mt-1">
+              By submitting you agree to our{" "}
                 <Link
-                  href="https://www.linkedin.com/company/nextlogistic/posts/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-blue-600 text-blue-600"
+                  href="/privacy-policy"
+                  className="text-blue-600 underline"
                 >
-                  <LinkedInIcon className="text-[18px]" />
+                  Privacy Policy
                 </Link>
+                .
+              </p>
+            </form>
+          </div>
+
+          {/* Right - contacts */}
+          <div className="bg-blue-700 w-full lg:w-1/2 p-8 md:p-12 text-white flex flex-col">
+            <h2 className="text-2xl font-bold mb-2">Contacts</h2>
+            <p className="text-blue-100 mb-6">
+            We will respond to your enquiries as quickly as possible and will be glad to help!
+            </p>
+
+            <div className="flex flex-col gap-4 mb-6">
+              <div className="flex items-start gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600">
+                  <LocalPhoneIcon className="text-white text-[20px]" />
+                </span>
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-blue-200">
+                    Phone
+                  </p>
+                  <p className="font-semibold">+359 893 406 767</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600">
+                  <EmailIcon className="text-white text-[20px]" />
+                </span>
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-blue-200">
+                    Email
+                  </p>
+                  <p className="font-semibold">office@nextlogistic.eu</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600">
+                  <PlaceIcon className="text-white text-[20px]" />
+                </span>
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-blue-200">
+                    Address 
+                  </p>
+                  <p className="font-semibold">36 Rogoshko Shose St., Plovdiv</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-md w-full lg:w-full lg:h-74">
-            <h2 className="text-black mb-2 font-bold">Address</h2>
-            <p className="text-gray-700 text-lg">
-              36 Rogoshko Shose St., Plovdiv
-            </p>
-            <iframe
-              title="Our Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1478.7047524025772!2d24.77305763892986!3d42.16292138096249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1c2b99d99c3%3A0x3bb163b6b1e1fd50!2sNext%20Logistic!5e0!3m2!1sbg!2sbg!4v1784297462261!5m2!1sbg!2sbg"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="border rounded shadow-lg w-full h-64 md:h-96 lg:h-46"
-            ></iframe>
+
+            <div className="flex items-center gap-2 mb-6">
+              <Link
+                href="https://www.facebook.com/nextlogistic"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-600 hover:bg-blue-500 transition-colors"
+              >
+                <FacebookIcon className="text-white text-[18px]" />
+              </Link>
+
+              <Link
+                href="https://www.instagram.com/nextlogistic.eu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-600 hover:bg-blue-500 transition-colors"
+              >
+                <InstagramIcon className="text-white text-[18px]" />
+              </Link>
+
+              <Link
+                href="https://www.linkedin.com/company/nextlogistic/posts/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-600 hover:bg-blue-500 transition-colors"
+              >
+                <LinkedInIcon className="text-white text-[18px]" />
+              </Link>
+            </div>
+
+            <div className="relative rounded-xl overflow-hidden flex-1 min-h-[220px]">
+              <a
+                href="https://www.google.com/maps/place/Next+Logistic/@42.16292138096249,24.77305763892986,17z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-3 left-3 z-10 flex items-center gap-1 bg-white text-blue-600 text-sm font-medium px-3 py-1.5 rounded-md shadow-md"
+              >
+                Open in Maps
+                <OpenInNewIcon className="text-[14px]" />
+              </a>
+              <iframe
+                title="Our Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1478.7047524025772!2d24.77305763892986!3d42.16292138096249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1c2b99d99c3%3A0x3bb163b6b1e1fd50!2sNext%20Logistic!5e0!3m2!1sbg!2sbg!4v1784297462261!5m2!1sbg!2sbg"
+                height="100%"
+                width="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full min-h-[220px]"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* FAQ */}
       <div className="bg-white items-center justify-center flex flex-col gap-4 p-10 md:p-20">
         <div>
           <p className="text-blue-600 font-bold text-sm text-center">
-            Frequently asked questions
+            Често задавани въпроси
           </p>
-          <p className="text-black text-2xl font-bold">
-            Have questions? Find{" "}
-            <span className="text-blue-600">
-              {" "}
-              the answers you&apos;re looking for.
-            </span>
+          <p className="text-black text-2xl font-bold text-center">
+            Имате въпроси?{" "}
+            <span className="text-blue-600">Намерете отговорите тук.</span>
           </p>
         </div>
-        <div className="">
+        <div className="w-full max-w-3xl">
           {contactFaq.map((faq) => (
             <div
               key={faq.id}
