@@ -9,7 +9,6 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Link from "next/link";
 import { useState } from "react";
 import contactFaq from "./contactFaq";
-import Footer from "@/components/Footer";
 
 function ContactPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -190,7 +189,6 @@ function ContactPage() {
           ))}
         </div>
       </div>
-      <Footer />
     </section>
   );
 }

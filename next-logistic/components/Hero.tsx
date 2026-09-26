@@ -1,171 +1,191 @@
+"use client";
+import { ReactNode } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Box from "@mui/material/Box";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import LanguageIcon from "@mui/icons-material/Language";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import DirectionsBoatFilledIcon from "@mui/icons-material/DirectionsBoatFilled";
-import TrainIcon from "@mui/icons-material/Train";
+import ScheduleIcon from "@mui/icons-material/Schedule";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+
+type Stats = {
+  value: string;
+  label: string;
+  icon: ReactNode;
+};
+const stats: Stats[] = [
+  {
+    value: "15+",
+    label: "YEARS OF EXPERIENCE",
+    icon: <EmojiEventsIcon />,
+  },
+  {
+    value: "35+",
+    label: "COUNTRIES",
+    icon: <LanguageIcon />,
+  },
+  {
+    value: "100K+",
+    label: "OPERATIONS PER YEAR",
+    icon: <LocalShippingIcon />,
+  },
+  {
+    value: "24/7",
+    label: "TRANSPORT MONITORING",
+    icon: <ScheduleIcon />,
+  },
+];
 
 const Hero = () => {
   return (
-    <section className="relative h-screen overflow-hidden w-full bg-[#0b3d91] ">
-      <div className="absolute inset-0 bg-linear-to-r from-blue-900/80 to-blue-600/60"></div>
+    <section className="relative w-full min-h-[90svh] overflow-hidden lg:min-h-screen">
       <Image
-        src="/hero-trucks.png"
+        src="/new-hero-image.png"
         alt="Hero Image"
-        width={1920}
-        height={1080}
+        fill
         priority
-        // sizes="100vw"
-        className="absolute inset-0 h-full w-full object-cover opacity-100"
+        className="object-cover object-[center_20%] md:object-[center_center]"
       />
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white w-full">
-        {/* Stats like in image */}
-        <div className="flex md:mb-15 flex-wrap items-center justify-center gap-6  scrollbar-none px-6 text-sm md:gap-10 md:text-base text-white/90">
-          <div className="flex items-center gap-2 pr-4 border-r border-white">
-            <span>
-              <LocalShippingIcon
-                sx={{
-                  fontSize: 35,
-                  transition: "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1)",
-                  transformOrigin: "center",
-                  "&:hover": {
-                    transform: " scale(1.12)",
-                  },
-                }}
-                className="mx-auto mb-2"
-              />
-            </span>
-            <div className="pl-2">
-              <p className="font-bold text-white">1500</p>
-              <p className="text-sm">TRUCKS</p>
-            </div>
-            <div className="pl-2">
-              <p className="font-bold text-white">3000</p>
-              <p className="text-sm">TRAILERS</p>
-            </div>
-          </div>
+      <Box
+        component="div"
+        className="absolute inset-0 bg-gradient-to-r from-zinc-900/30 to-black/10 z-20"
+      />
+      <Box
+        component="div"
+        sx={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 20,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          paddingTop: "190px",
+        }}
+      >
+        <Box
+          component="div"
+          sx={{
+            width: { xs: "100%", md: "80%", lg: "70%", xl: "50%" },
+            paddingRight: { xs: "16px", md: "60px" },
+            paddingLeft: { xs: "16px", md: 0 },
+            alignSelf: "flex-end",
+          }}
+        >
+          <div>
+            <h1 className="font-bold text-white text-3xl md:text-4xl lg:text-4xl">
+              Innovative logistics solutions for a sustainable future
+            </h1>
 
-          <div className=" flex items-center text-center border-r border-white pr-4">
-            <span>
-              <DirectionsBoatFilledIcon
-                sx={{
-                  fontSize: 35,
-                  transition: "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1)",
-                  transformOrigin: "center",
-                  "&:hover": {
-                    transform: "scale(1.12)",
-                  },
-                }}
-                className="mx-auto mb-2"
-              />
-            </span>
-            <div className="flex flex-col pl-3">
-              <p className="font-bold text-white">170</p>
-              <p className="text-sm">
-                <span className="block">DIFFERENT</span>
-                <span className="block">ROUTES</span>
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 pr-4 border-r border-white ">
-            <span>
-              <TrainIcon
-                sx={{
-                  fontSize: 35,
-                  transition: "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1)",
-                  transformOrigin: "center",
-                  "&:hover": {
-                    transform: " scale(1.12)",
-                  },
-                }}
-                className="mx-auto mb-2"
-              />
-            </span>
-            <div className="pl-2">
-              <p className="font-bold text-white">35</p>
-              <p className="text-sm">LOCOMOTIVES</p>
-            </div>
-            <div className="pl-2">
-              <p className="font-bold text-white">805</p>
-              <p className="text-sm">WAGONS</p>
-            </div>
-          </div>
-          <div className="hidden  md:flex items-center text-center border-r border-white pr-4">
-            <span>
-              <DirectionsBoatFilledIcon
-                sx={{
-                  fontSize: 35,
-                  transition: "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1)",
-                  transformOrigin: "center",
-                  "&:hover": {
-                    transform: " scale(1.12)",
-                  },
-                }}
-                className="mx-auto mb-2"
-              />
-            </span>
-            <div className="pl-3">
-              <p className="font-bold text-white">170</p>
-              <p className="text-sm">
-                <span className="block">DIFFERENT</span>
-                <span className="block">ROUTES</span>
-              </p>
-            </div>
-          </div>
-          <div className="hidden  md:flex items-center gap-2 pr-4  ">
-            <span>
-              <TrainIcon
-                sx={{
-                  fontSize: 35,
-                  transition: "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1)",
-                  transformOrigin: "center",
-                  "&:hover": {
-                    transform: " scale(1.12)",
-                  },
-                }}
-                className="mx-auto mb-2"
-              />
-            </span>
-            <div className="pl-2">
-              <p className=" font-bold text-white">35</p>
-              <p className="text-sm">LOCOMOTIVES</p>
-            </div>
-            <div className="pl-2">
-              <p className="font-bold text-white">805</p>
-              <p className="text-sm">WAGONS</p>
-            </div>
-          </div>
-        </div>
-        {/* Logo container */}
-        <div className="group mb-6 flex flex-col xl:flex-row xl: flex-end items-center gap-6 transition-all duration-700">
-          <div className=" md:relative md:inline-block">
-            <Image
-              src="/logo.png"
-              alt="Nextlogistic Logo"
-              width={1600}
-              height={1000}
-              className="w-full h-auto object-contain  transition-transform duration-300 hover:scale-105"
-            />
-          </div>
-          <div className="hidden xl:relative md:hidden xl:block">
-            <Image
-              src="/aside-next-logo.png"
-              alt="Aside Next Logo"
-              width={320}
-              height={250}
+            <motion.div
+              className="my-6 h-1 w-12 bg-blue-700"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1.3 }}
             />
 
-            <div className="absolute bottom-8 inset-0 flex items-center justify-center">
-              <Image
-                src="/cosmonavt.png"
-                alt="Cosmonavt"
-                width={170}
-                height={200}
-                className=" transition-transform duration-300 hover:scale-110"
-              />
-            </div>
+            <p className="max-w-xl text-base text-white/80 sm:text-lg">
+              With a focus on innovation, efficiency and sustainable
+              development, we organise land, sea and rail transport in over{" "}
+              <span className="font-bold text-yellow-300">35</span> countries.
+            </p>
+
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1.3 }}
+            >
+              <Link
+                href="/contact"
+                className="mt-7 inline-block rounded-lg bg-blue-700/90 px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-blue-600"
+              >
+                REQUEST TRANSPORT
+              </Link>
+            </motion.div>
           </div>
-        </div>
-      </div>
+        </Box>
+        <Box
+          component="div"
+          sx={{
+            position: "absolute",
+            bottom: "40px",
+            display: "flex",
+            gap: "20px",
+          }}
+        >
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.3 }}
+          >
+            <Stack
+              direction={{ xs: "column", md: "row" }}
+              divider={
+                <Divider
+                  orientation="vertical"
+                  flexItem
+                  sx={{
+                    borderColor: "rgba(255,255,255,0.35)",
+                  }}
+                />
+              }
+              sx={{
+                width: "100vw",
+                // ml: "calc(50% - 50vw)",
+                minHeight: 90,
+                color: "white",
+                alignItems: { xs: "center", md: "stretch" },
+                px: { xs: 2, md: 8 },
+                py: 2,
+              }}
+            >
+              {stats.map((stat) => (
+                <Stack
+                  key={stat.label}
+                  direction="row"
+                  sx={{
+                    flex: 1,
+                    alignItems: "center",
+                    justifyContent: "start",
+                    ml: { xs: 0, md: 2 },
+                    width: { xs: 260, md: "auto" },
+                  }}
+                  spacing={2}
+                >
+                  <Box sx={{ color: "#087cff" }}>{stat.icon}</Box>
+
+                  <Box>
+                    <Typography
+                      sx={{
+                        fontSize: { xs: 20, md: 22 },
+                        fontWeight: 700,
+                        lineHeight: 1,
+                      }}
+                    >
+                      {stat.value}
+                    </Typography>
+
+                    <Typography
+                      sx={{
+                        fontSize: 11,
+                        mt: 0.5,
+                        color: "rgba(255,255,255,0.8)",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {stat.label}
+                    </Typography>
+                  </Box>
+                </Stack>
+              ))}
+            </Stack>
+          </motion.div>
+        </Box>
+      </Box>
     </section>
   );
 };
