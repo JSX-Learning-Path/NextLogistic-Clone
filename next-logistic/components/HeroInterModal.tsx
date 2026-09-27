@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function HeroInterModal() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0b3d91] min-h-[70svh] lg:min-h-[80vh]">
+    <section className="relative w-full overflow-hidden bg-[#0b3d91]  min-h-[70svh] lg:min-h-[80vh]">
       {/* Background image */}
       <Image
         src="/inter-modal-transport-train.png"

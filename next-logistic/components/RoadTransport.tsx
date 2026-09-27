@@ -6,7 +6,7 @@ import Link from "next/link";
 function RoadTransport() {
   return (
     <section className="bg-white min-h-screen">
-      <div className="flex flex-col md:flex-row md:gap-5 px-1 md:px-10 ">
+      <div className="flex flex-col md:flex-row md:gap-5 px-1 md:px-15 ">
         <div className="flex px-2 flex-col py-5 md:w-1/2 md:py-10">
           <h2 className="text-sm font-bold mb-4 text-blue-600 ">
             Road Transport Services
@@ -22,16 +22,16 @@ function RoadTransport() {
             industries and key sectors across Europe.
           </p>
           <article
-            className="flex justify-center flex-row mt-5 border py-2 rounded-xl border-black/20 hover:bg-blue-100/20
+            className="flex justify-center flex-row mt-5 border py-7 rounded-xl border-black/20 hover:bg-blue-100/20
          transition-all duration-400"
           >
             <ul className="md:w-1/5 flex flex-col flex-start py-2 px-2">
-              <li className="text-blue-600 font-extrabold text-xl md:text-2xl">
+              <li className="text-blue-600 font-extrabold text-xl md:text-3xl">
                 1450
               </li>
               <li className="text-black/80 text-sm">Trucks</li>
             </ul>
-            <div className="w-full border-l border-black/20 pl-5">
+            <div className="w-full  border-black/20 pl-5">
               <h6 className="font-extrabold text-black/80">Truck fleet</h6>
               <p className="text-black/80 text-sm">
                 889 x Euro 6 | 261 x Euro 5 | 150 x LNG | 150 x CNG
@@ -41,16 +41,16 @@ function RoadTransport() {
             </div>
           </article>
           <article
-            className="flex justify-center flex-row mt-5 border py-2 rounded-xl border-black/20 hover:bg-blue-100/20
+            className="flex justify-center flex-row mt-5 border py-7 rounded-xl border-black/20 hover:bg-blue-100/20
          transition-all duration-400"
           >
             <ul className="w-1/5 flex flex-col flex-start py-2 px-2">
-              <li className="text-blue-600 font-extrabold text-xl md:text-2xl">
+              <li className="text-blue-600 font-extrabold text-xl md:text-3xl">
                 2850
               </li>
               <li className="text-black/80 text-sm">Trailers</li>
             </ul>
-            <div className="w-full border-l border-black/20 pl-5">
+            <div className="w-full  border-black/20 pl-5">
               <h6 className="font-extrabold text-black/80">
                 Variety for all types of cargo
               </h6>
@@ -64,16 +64,16 @@ function RoadTransport() {
             </div>
           </article>
           <article
-            className="flex justify-center flex-row mt-5 border py-2 rounded-xl border-black/20 hover:bg-blue-100/20
+            className="flex justify-center flex-row mt-5 border py-7 rounded-xl border-black/20 hover:bg-blue-100/20
          transition-all duration-400"
           >
             <ul className="w-1/5 flex flex-col flex-start py-2 px-2">
-              <li className="text-blue-600 font-extrabold text-xl md:text-2xl">
+              <li className="text-blue-600 font-extrabold text-xl md:text-3xl">
                 7800
               </li>
               <li className="text-black/80 text-sm">Trusted Carrier</li>
             </ul>
-            <div className="w-full border-l border-black/20 pl-5">
+            <div className="w-full  border-black/20 pl-5">
               <h6 className="font-extrabold text-black/80">Partner network</h6>
               <p className="text-black/80 text-sm">
                 Our partner logistics networks give us access to a fleet of more
@@ -83,16 +83,16 @@ function RoadTransport() {
             </div>
           </article>
           <article
-            className="flex justify-center flex-row mt-5 border py-2 rounded-xl border-black/20 hover:bg-blue-100/20
+            className="flex justify-center flex-row mt-5 border py-7 rounded-xl border-black/20 hover:bg-blue-100/20
          transition-all duration-400"
           >
             <ul className="w-1/5 flex flex-col flex-start py-2 px-2 ">
-              <li className="text-blue-600 font-extrabold text-xl md:text-2xl">
+              <li className="text-blue-600 font-extrabold text-xl md:text-3xl">
                 30
               </li>
               <li className="text-black/80 text-xs ">Countries</li>
             </ul>
-            <div className="w-full border-l border-black/20 pl-5">
+            <div className="w-full  border-black/20 pl-5">
               <h6 className="font-extrabold text-black/80">Partner network</h6>
               <p className="text-black/80 text-sm">
                 Our partner logistics networks give us access to a fleet of more
