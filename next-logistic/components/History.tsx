@@ -3,7 +3,7 @@ import PieChart from "./charts/PieChart";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Image from "next/image";
 import Link from "next/dist/client/link";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+// import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { BarChart } from "@mui/x-charts/BarChart";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import Box from "@mui/material/Box";
