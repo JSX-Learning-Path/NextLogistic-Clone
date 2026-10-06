@@ -77,7 +77,7 @@ function ProfessionalStartAcademy() {
           width: "100%",
           maxWidth: "1600px",
           mx: "auto",
-          px: 2,
+          px: 3,
           py: 2,
         }}
       >
@@ -168,13 +168,11 @@ function ProfessionalStartAcademy() {
           <Box
             sx={{
               flex: 1,
-
               display: "grid",
 
               // Mobile
               gridTemplateColumns: "repeat(2, 1fr)",
-
-              gap: 1.5,
+              gap: 1,
 
               // Tablet
               "@media (min-width: 768px)": {
@@ -268,7 +266,11 @@ function ProfessionalStartAcademy() {
             </Typography>
             <Box
               component="div"
-              sx={{ display: "flex", mt: 2, alignItems: "center" }}
+              sx={{
+                display: "flex",
+                mt: 2,
+                alignItems: "center",
+              }}
             >
               <Box
                 component="img"
@@ -293,7 +295,7 @@ function ProfessionalStartAcademy() {
                 <Box
                   sx={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     gap: 1,
                   }}
                 >
@@ -311,17 +313,27 @@ function ProfessionalStartAcademy() {
                 <Box
                   sx={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     gap: 1,
+                    width: "100%",
                   }}
                 >
                   <CheckIcon
                     sx={{
                       color: "#6D95FF",
-                      fontSize: 18,
+                      fontSize: 16,
+                      flexShrink: 0,
+                      mt: "3px",
                     }}
                   />
-                  <Typography sx={{ fontSize: 15, color: "rgba(0,0,0,0.65)" }}>
+
+                  <Typography
+                    sx={{
+                      fontSize: { xs: 13, sm: 15 },
+                      color: "rgba(0,0,0,0.65)",
+                      lineHeight: 1.5,
+                    }}
+                  >
                     Real challenges
                   </Typography>
                 </Box>

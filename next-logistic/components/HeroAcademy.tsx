@@ -16,8 +16,6 @@ function DigitalAcademyHero() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-
-        borderRadius: 2,
       }}
     >
       <Box
@@ -84,7 +82,8 @@ function DigitalAcademyHero() {
             textAlign: "left",
             display: {
               xs: "none",
-              md: "flex",
+              md: "none",
+              lg: "flex",
             },
           }}
         >
