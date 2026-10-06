@@ -20,6 +20,7 @@ function DigitalAcademyHero() {
     >
       <Box
         sx={{
+          opacity: 0.9,
           position: "absolute",
           left: "50%",
           bottom: {
