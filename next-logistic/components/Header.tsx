@@ -143,7 +143,7 @@ const Header = () => {
                     </span>
                     <div className="flex flex-col">
                       <Link
-                        href="/technologies"
+                        href="/technology"
                         className="block p-1 text-gray-700 font-bold"
                       >
                         Technology
