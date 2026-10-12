@@ -78,7 +78,7 @@ const Header = () => {
                     </span>
                     <div className="flex flex-col">
                       <Link
-                        href="/about"
+                        href="/about-us"
                         className="block p-1 text-black/80 font-bold"
                       >
                         About us

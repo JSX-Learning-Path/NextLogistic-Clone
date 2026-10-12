@@ -1,72 +1,101 @@
-import React from "react";
-import PieChart from "./charts/PieChart";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Image from "next/image";
 import Link from "next/dist/client/link";
-// import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { BarChart } from "@mui/x-charts/BarChart";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+// import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import TimelinePoint from "./charts/TimeLineChart";
 
-const History = () => {
+function History() {
   return (
-    <section className="w-full overflow-hidden bg-[#DCE9F7]">
-      <div className="mx-auto flex w-full flex-col md:flex-row">
-        {/* LEFT */}
-        <div className="w-full space-y-6 rounded-xl p-10 md:p-[50px] md:w-1/2">
-          <h5 className="text-sm font-semibold text-blue-600">
-            HISTORY
-            <hr className="w-[30px] border-blue-600" />
-          </h5>
-
-          <h2 className="mt-5 text-2xl font-bold text-blue-600">
-            <span className="text-2xl font-extrabold text-black">
-              Logistic,
-            </span>{" "}
-            driving the future
-          </h2>
-
-          <Box component="div" sx={{ mb: 4 }}>
-            <Typography sx={{ fontSize: "0.90rem", color: "text.secondary" }}>
-              <span className="font-bold text-sm text-blue-600">
-                NEXT LOGISTICS
-              </span>{" "}
-              was founded in 2011 as part of the largest transport group in the
-              Balkans. The company follows a consistent development strategy
-              based on controlling key elements of the supply chain and
-              integrating diverse transport modes into a unified operational
-              structure.
+    <Box
+      component="section"
+      sx={{
+        width: "100%",
+        overflow: "hidden",
+        backgroundColor: "#DCE9F7",
+        minHeight: "100vh",
+      }}
+    >
+      <Box
+        sx={{
+          width: "100%",
+          minHeight: "100vh",
+          maxWidth: "1500px",
+          margin: "50px auto",
+          display: { xs: "flex", md: "flex" },
+          flexDirection: { xs: "column", md: "row" },
+          gap: { xs: "20px", md: "50px" },
+        }}
+      >
+        {/* Left */}
+        <Box component="div" sx={{ maxWidth: "700px" }}>
+          <Box>
+            <Typography
+              sx={{
+                color: "#2864ff",
+                fontSize: "14px",
+                fontWeight: 700,
+                letterSpacing: "1.5px",
+                textTransform: "uppercase",
+                mb: 1,
+              }}
+            >
+              History
             </Typography>
-            <Typography sx={{ fontSize: "0.90rem", color: "text.secondary" }}>
+
+            <Box
+              sx={{
+                width: "32px",
+                height: "2px",
+                backgroundColor: "#2864ff",
+              }}
+            />
+          </Box>
+          <Typography
+            sx={{
+              color: "black",
+              fontSize: "25px",
+              fontWeight: 700,
+              marginTop: "10px",
+              marginBottom: "10px",
+            }}
+          >
+            Logistic, <span className="text-blue-600">driving the future</span>
+          </Typography>
+          <Typography sx={{ color: "gray" }}>
+            <span className="text-blue-600 uppercase font-bold mr-1">
+              Next Logistic
+            </span>
+            was founded in 2011 as part of the largest transport group in the
+            Balkans. The company follows a consistent development strategy based
+            on controlling key elements of the supply chain and integrating
+            diverse transport modes into a unified operational structure.
+          </Typography>
+          <Box sx={{ mt: "10px" }}>
+            <Typography sx={{ color: "gray" }}>
               In 2012, as part of the group's expansion,{" "}
-              <span className="font-bold text-sm text-blue-600">
+              <span className="text-blue-600 uppercase font-bold mr-1">
                 TRUCK FERRY
-              </span>{" "}
+              </span>
               was launched, providing direct access to major maritime routes and
               seamlessly combining road and sea transport. This intermodal
               approach significantly reduces carbon emissions, noise pollution,
               and road safety risks while enabling precise scheduling through
               fixed timetables.
             </Typography>
-            <Typography
-              sx={{ fontSize: "1.2rem", color: "#306AFF", fontWeight: "bold" }}
-            >
+            <Typography sx={{ color: "#2962FF", fontWeight: 700 }}>
               In recent years, our focus has turned toward digitalization and
               technological innovation,
             </Typography>
-            <Typography
-              sx={{ mt: 2, fontSize: "0.90rem", color: "text.secondary" }}
-            >
+            <Typography sx={{ color: "gray", marginTop: "10px" }}>
               including the deployment of proprietary management software and
               real-time tracking systems. This guarantees maximum operational
               efficiency, full traceability, and complete control over every
               step of the logistics process.
             </Typography>
           </Box>
-
-          {/* Chart */}
           <Box
             component="div"
             sx={{
@@ -76,6 +105,7 @@ const History = () => {
               display: "flex",
               flexDirection: "column",
               borderRadius: "20px",
+              marginTop: "20px",
             }}
           >
             <Typography
@@ -84,16 +114,19 @@ const History = () => {
                 color: "#306AFF",
                 textTransform: "uppercase",
                 fontWeight: "bold",
+                marginTop: "10px",
               }}
             >
               Total Shipments Completed
             </Typography>
-            <Typography sx={{}}>(2021 – 2025)</Typography>
+            <Typography sx={{ color: "gray", fontSize: "15px" }}>
+              (2021 – 2025)
+            </Typography>
             <Box
               component="div"
               sx={{
                 marginTop: "80px",
-                width: "90%",
+                width: "80%",
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
@@ -109,104 +142,316 @@ const History = () => {
               <TimelinePoint value="34.1K" year="2025" />
             </Box>
           </Box>
-        </div>
-        {/* RIGHT */}
-        <div className="md:w-1/2">
-          <div className="flex flex-col md:flex md:flex-row px-10">
-            <div className="bg-blue-600 flex gap-2 text-sm mt-10 py-5 rounded-xl md:pb-10">
-              <CheckCircleIcon sx={{ color: "white" }} />
-              <p className="text-white text-sm">
-                Logistics services combining efficiency, innovation, and
-                sustainability. With a network of trusted partners and modern
-                infrastructure, we provide solutions for key destinations and
-                routes, ensuring flexibility and uncompromising reliability.
-              </p>
-            </div>
-            <div className="mt-10">
-              <BarChart
-                xAxis={[
-                  {
-                    scaleType: "band",
-                    data: ["2020", "2021", "2022", "2023", "2024"],
-                  },
-                ]}
-                series={[
-                  {
-                    data: [6400, 27500, 38700, 38400, 29800],
-                  },
-                ]}
-                width={300}
-                height={250}
-              />
-            </div>
-          </div>
-          <div className="hidden md:hidden xl:px-10 xl:mt-5 xl:flex xl:flex-wrap xl:gap-2">
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
-              <CheckCircleIcon className="text-blue-600" />
-              Cost Optimization
-            </span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
-              <CheckCircleIcon className="text-blue-600" />
-              Modern Fleet
-            </span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
-              <CheckCircleIcon className="text-blue-600" />
-              Ecology
-            </span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
-              <CheckCircleIcon className="text-blue-600" />
-              Planning
-            </span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
-              <CheckCircleIcon className="text-blue-600" />
-              Security
-            </span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
-              <CheckCircleIcon className="text-blue-600" />
-              Express Deliveries
-            </span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
-              <CheckCircleIcon className="text-blue-600" />
-              Monitoring
-            </span>
-            <span className=" border border-blue-600 text-blue-600 rounded-2xl p-1 inline-flex flex-row items-center gap-1 text-sm hover:bg-blue-100/50">
-              <CheckCircleIcon className="text-blue-600" />
-              Technology and innovation
-            </span>
-          </div>
-          <div className="relative mt-10 px-10">
-            <Image
-              src="/mercedes-trucks.png"
-              alt="Mercedes Trucks"
-              width={900}
-              height={300}
-              className="relative rounded-lg"
-            />
-            <div className="absolute top-10 left-50 text-xl font-extrabold text-white flex flex-row gap-5">
-              <div className="flex flex-col items-start gap-2 text-lg">
-                <span>1500</span>
-                <span>Trucks</span>
-              </div>
-              <div className="flex flex-col items-start gap-2 text-lg">
-                <span>3000</span>
-                <span>Trailers</span>
-              </div>
-              <div className="flex flex-col items-start gap-2 text-lg">
-                <span>7800</span>
-                <span>Subcontractors</span>
-              </div>
-            </div>
-            <Link
-              href="/roadTransport"
-              className="absolute bottom-5 right-20  text-white flex flex-row gap-5"
+        </Box>
+        {/* Right */}
+        <Box sx={{ display: "flex", flexDirection: "row", gap: "20px" }}>
+          <Box
+            sx={{
+              width: "350px",
+              height: "200px",
+              backgroundColor: "#fff",
+              borderRadius: "16px",
+              boxShadow: "0 3px 8px rgba(0, 0, 0, 0.15)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              paddingTop: "24px",
+            }}
+          >
+            <Typography
+              sx={{
+                color: "#2864ff",
+                fontSize: "14px",
+                fontWeight: 700,
+                letterSpacing: "0.5px",
+              }}
             >
-              Road Transport <ArrowRightIcon />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
+              ANNUAL REVENUE
+            </Typography>
+
+            <Box
+              sx={{
+                width: "126px",
+                height: "126px",
+                border: "1.5px solid #2864ff",
+                borderRadius: "50%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                mt: "18px",
+              }}
+            >
+              <Typography
+                sx={{
+                  color: "#2864ff",
+                  fontSize: "16px",
+                  fontWeight: 700,
+                }}
+              >
+                106 036 274
+              </Typography>
+
+              <Typography
+                sx={{
+                  color: "#53627a",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  mt: "6px",
+                }}
+              >
+                2025 yr
+              </Typography>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              width: "350px",
+              height: "200px",
+              backgroundColor: "#fff",
+              borderRadius: "16px",
+              boxShadow: "0 3px 8px rgba(0, 0, 0, 0.15)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              paddingTop: "24px",
+            }}
+          >
+            <Typography
+              sx={{
+                color: "#2864ff",
+                fontSize: "13px",
+                fontWeight: 700,
+              }}
+            >
+              TOTAL FINANCIAL PERFORMANCE
+            </Typography>
+
+            <Typography
+              sx={{
+                color: "#53627a",
+                fontSize: "14px",
+                mt: 0.5,
+              }}
+            >
+              Next Logistics & Truck Ferry
+            </Typography>
+
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "flex-end",
+                justifyContent: "space-between",
+                width: "300px",
+                height: "105px",
+                mt: 1,
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  height: "100%",
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#2864ff",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                  }}
+                >
+                  79.6M
+                </Typography>
+
+                <Box
+                  sx={{
+                    width: "20px",
+                    height: "32px",
+                    backgroundColor: "#2864ff",
+                    borderRadius: "3px 3px 0 0",
+                    mt: 0.5,
+                  }}
+                />
+
+                <Typography
+                  sx={{
+                    fontSize: "12px",
+                    mt: 0.5,
+                    color: "black",
+                  }}
+                >
+                  2021
+                </Typography>
+              </Box>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  height: "100%",
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#2864ff",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                  }}
+                >
+                  156.9M
+                </Typography>
+
+                <Box
+                  sx={{
+                    width: "20px",
+                    height: "63px",
+                    backgroundColor: "#2864ff",
+                    borderRadius: "3px 3px 0 0",
+                    mt: 0.5,
+                  }}
+                />
+
+                <Typography
+                  sx={{
+                    fontSize: "12px",
+                    mt: 0.5,
+                    color: "black",
+                  }}
+                >
+                  2022
+                </Typography>
+              </Box>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  height: "100%",
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#2864ff",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                  }}
+                >
+                  133.6M
+                </Typography>
+
+                <Box
+                  sx={{
+                    width: "20px",
+                    height: "54px",
+                    backgroundColor: "#2864ff",
+                    borderRadius: "3px 3px 0 0",
+                    mt: 0.5,
+                  }}
+                />
+
+                <Typography
+                  sx={{
+                    fontSize: "12px",
+                    mt: 0.5,
+                    color: "black",
+                  }}
+                >
+                  2023
+                </Typography>
+              </Box>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  height: "100%",
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#2864ff",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                  }}
+                >
+                  95.8M
+                </Typography>
+
+                <Box
+                  sx={{
+                    width: "20px",
+                    height: "38px",
+                    backgroundColor: "#2864ff",
+                    borderRadius: "3px 3px 0 0",
+                    mt: 0.5,
+                  }}
+                />
+
+                <Typography
+                  sx={{
+                    fontSize: "12px",
+                    mt: 0.5,
+                    color: "black",
+                  }}
+                >
+                  2024
+                </Typography>
+              </Box>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  height: "100%",
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#2864ff",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                  }}
+                >
+                  106.1M
+                </Typography>
+
+                <Box
+                  sx={{
+                    width: "20px",
+                    height: "42px",
+                    backgroundColor: "#2864ff",
+                    borderRadius: "3px 3px 0 0",
+                    mt: 0.5,
+                  }}
+                />
+
+                <Typography
+                  sx={{
+                    fontSize: "12px",
+                    mt: 0.5,
+                    color: "black",
+                  }}
+                >
+                  2025
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
-};
+}
 
 export default History;
