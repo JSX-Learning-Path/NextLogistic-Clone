@@ -16,8 +16,8 @@ function LogisticInnovation() {
           justifyContent: "space-between",
           display: "flex",
           gap: "40px",
-        //   flexDirection: { xs: "column", md: "column", lg: "row" },
-        //   alignItems: { xs: "flex-start", md: "flex-start", lg: "center" },
+          flexDirection: { xs: "column", md: "column", lg: "row" },
+          alignItems: { xs: "flex-start", md: "flex-start", lg: "center" },
         }}
       >
         {/* left Side */}

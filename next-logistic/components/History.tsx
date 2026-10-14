@@ -584,7 +584,7 @@ function History() {
               }}
             />
 
-            {/* Dark gradient overlay */}
+            {/* overlay */}
             <Box
               sx={{
                 position: "absolute",
@@ -594,11 +594,11 @@ function History() {
               }}
             />
 
-            {/* Statistics */}
+            {/* Stats */}
             <Box
               sx={{
                 position: "absolute",
-                right: { xs: "16px", md: "28px" },
+                right: { xs: "16px", md: "38px" },
                 bottom: { xs: "16px", md: "24px" },
                 display: "flex",
                 alignItems: "center",
