@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
-// import { Description } from "@mui/icons-material";
+
 
 const technicalIconAndTitle = [
   {
@@ -201,7 +201,7 @@ function TechnicalAndCreative() {
         <Box>
           <Typography
             gutterBottom
-            sx={{ color: "#2962FF", fontWeight: "bold" }}
+            sx={{ color: "#2962FF", fontWeight: "bold", marginLeft: "20px" }}
           >
             Technical
           </Typography>
@@ -249,7 +249,7 @@ function TechnicalAndCreative() {
           <Box>
             <Typography
               gutterBottom
-              sx={{ color: "#2962FF", fontWeight: "bold" }}
+              sx={{ color: "#2962FF", fontWeight: "bold", marginLeft: "20px" }}
             >
               Creative
             </Typography>

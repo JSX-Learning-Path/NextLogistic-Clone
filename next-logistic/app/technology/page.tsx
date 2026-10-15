@@ -3,6 +3,7 @@ import LogisticInnovation from "../../components/Logistic-Innovation";
 import WhyWorkWithUs from "../../components/WhyWorkWithUs";
 import TechnologyAndInnovation from "../../components/TechnologyAndInnovation";
 import TechnicalAndCreative from "../../components/Technical&Creative";
+import InnovationSpirit from "../../components/InnovationSpirit";
 
 function TechnologyPage() {
   return (
@@ -12,6 +13,7 @@ function TechnologyPage() {
       <WhyWorkWithUs />
       <TechnologyAndInnovation />
       <TechnicalAndCreative />
+      <InnovationSpirit />
     </div>
   );
 }
