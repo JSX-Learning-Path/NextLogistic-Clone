@@ -189,7 +189,7 @@ function GrowAndDirections() {
                 efficient logistics solutions.
               </Box>
             </Box>
-            <Box component="div" sx={{ width: "100%" }}>
+            <Box component="div" sx={{ width: "100%", alignItems: "center", display: "flex" }}>
               <FinancialResultsChart />
             </Box>
           </Box>
