@@ -139,7 +139,7 @@ function ProfessionalsPeople() {
                             ))}
                             { /* The empty cell for the biggest picture*/}
                             <div className="h-[354px] w-full sm:col-span-4 ">
-                                <img src="/coworker.png" alt="Team" className="h-full w-full object-cover " />
+                                <img src="/searchingForNewTalent.png" alt="Team" className="h-full w-full object-cover " />
                             </div>
                         </div>
                     </div>
