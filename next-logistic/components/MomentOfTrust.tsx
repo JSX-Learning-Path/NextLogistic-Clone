@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function MomentOfTrust() {
   return (
-    <section className="bg-[#111418] w-full min-h-screen py-10 md:py-20">
+    <section className="bg-[#0F182B] w-full min-h-screen py-10 md:py-20">
       <div className="lg:flex lg:flex-row">
         {/* LEFT SIDE - TEXT */}
         <div className="w-full lg:w-1/2 px-10 lg:px-20">
@@ -71,7 +71,7 @@ function MomentOfTrust() {
         </div>
         {/* RIGHT SIDE - COSMONAUT */}
         <div className="w-full mt-10 lg:w-1/2 lg:mx-15 lg:mt-0 ">
-          <div className="relative grid h-[700px] grid-cols-2 grid-rows-2">
+          <div className="relative grid h-[700px] grid-cols-2 grid-rows-2 ">
             <Image
               src="/cosmonavt-of-trust.png"
               alt="Cosmonaut of Trust"
@@ -86,9 +86,10 @@ function MomentOfTrust() {
                 sx={{
                   color: "white",
                   fontSize: 40,
-                  backgroundColor: "black",
+                  backgroundColor: "##505A72",
                   padding: "7px",
                   borderRadius: "40px",
+                  border: "1px solid white",
                 }}
               />
 
@@ -114,9 +115,10 @@ function MomentOfTrust() {
                 sx={{
                   color: "white",
                   fontSize: 40,
-                  backgroundColor: "black",
+                  backgroundColor: "##505A72",
                   padding: "7px",
                   borderRadius: "40px",
+                  border: "1px solid white",
                 }}
               />
 
@@ -142,9 +144,10 @@ function MomentOfTrust() {
                 sx={{
                   color: "white",
                   fontSize: 40,
-                  backgroundColor: "black",
+                  backgroundColor: "##505A72",
                   padding: "7px",
                   borderRadius: "40px",
+                  border: "1px solid white",
                 }}
               />
 
@@ -170,9 +173,10 @@ function MomentOfTrust() {
                 sx={{
                   color: "white",
                   fontSize: 40,
-                  backgroundColor: "black",
+                  backgroundColor: "##505A72",
                   padding: "7px",
                   borderRadius: "40px",
+                  border: "1px solid white",
                 }}
               />
 
