@@ -35,16 +35,18 @@ function History() {
           maxWidth: "1500px",
           margin: "50px auto",
           display: { xs: "flex", md: "flex" },
-          flexDirection: { xs: "column", sm: "row" },
+          alignItems: { xs: "center" },
+          flexDirection: { xs: "column", md: "row" },
           gap: { xs: "24px", sm: "20px", lg: "50px" },
+          p: { xs: 4 },
         }}
       >
         {/* Left */}
         <Box
           component="div"
           sx={{
-            width: { xs: "100%", sm: "50%" },
-            maxWidth: "700px",
+            width: { xs: "100%", md: "50%" },
+            // maxWidth: "700px",
             minWidth: 0,
             flex: 1,
           }}
@@ -170,7 +172,7 @@ function History() {
           sx={{
             display: "flex",
             flexDirection: "column",
-            width: { xs: "100%", sm: "50%" },
+            width: { xs: "100%", md: "50%" },
             flex: 1,
             minWidth: 0,
           }}

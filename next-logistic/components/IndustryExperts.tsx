@@ -68,6 +68,7 @@ function IndustryExperts() {
                 marginTop: "16px",
                 padding: "10px 20px",
                 borderRadius: "15px",
+                width:"fit-content",
                 transition: "all 0.3s ease",
                 "&:hover": {
                   backgroundColor: "#FFFFFF",

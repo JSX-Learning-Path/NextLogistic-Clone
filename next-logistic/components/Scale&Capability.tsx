@@ -155,13 +155,16 @@ function ScaleAndCapability() {
           </Typography>
         </Box>
         {/*Cards Section */}
-        <Box component="div" sx={{ marginTop: "40px" }}>
+
+        <Box component="div" sx={{ mt: "40px" }}>
           <Box
             sx={{
               display: "grid",
-              gridTemplateColumns: { xs: "1fr", md: "repeat(2,1fr)" },
-              gridTemplateRows: { lg: "repeat(2,1fr)" },
-              gap: { xs: "15px", md: "20px 48px" },
+              gridTemplateColumns: {
+                xs: "1fr",
+                md: "repeat(2, minmax(0, 1fr))",
+              },
+              gap: { xs: 2, md: "20px 48px" },
               width: "100%",
             }}
           >
@@ -171,8 +174,10 @@ function ScaleAndCapability() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "30px",
-                  padding: "30px",
+                  gap: { xs: 2, sm: 3 },
+                  p: { xs: 2, sm: 3 },
+                  minWidth: 0,
+                  boxSizing: "border-box",
                   border: "1px solid #E0E7FF",
                   borderRadius: "15px",
                   boxShadow: "0 5px 20px rgba(36, 83, 233, 0.06)",
@@ -182,11 +187,18 @@ function ScaleAndCapability() {
                   },
                 }}
               >
-                <Box sx={{ minWidth: "100px", textAlign: "center" }}>
+                {/* Left */}
+                <Box
+                  sx={{
+                    flex: "0 0 90px",
+                    textAlign: "center",
+                    minWidth: 0,
+                  }}
+                >
                   <Typography
                     sx={{
                       color: "#2453E9",
-                      fontSize: "26px",
+                      fontSize: { xs: 23, sm: 26 },
                       fontWeight: 700,
                     }}
                   >
@@ -198,8 +210,15 @@ function ScaleAndCapability() {
                   </Typography>
                 </Box>
 
-                <Box sx={{ minWidth: 0 }}>
-                  <Typography sx={{ fontWeight: 700, color: "#111827" }}>
+                {/* Right */}
+                <Box sx={{ flex: 1, minWidth: 0 }}>
+                  <Typography
+                    sx={{
+                      fontWeight: 700,
+                      color: "#111827",
+                      overflowWrap: "break-word",
+                    }}
+                  >
                     {item.title}
                   </Typography>
 
@@ -208,6 +227,8 @@ function ScaleAndCapability() {
                       mt: "5px",
                       color: "#475569",
                       fontSize: "14px",
+                      lineHeight: 1.5,
+                      overflowWrap: "break-word",
                     }}
                   >
                     {item.description}

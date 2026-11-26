@@ -87,7 +87,7 @@ export default function CodeOfEthics() {
 
   return (
     <Box component="section" sx={{ bgcolor: "#FFFFFF", minHeight: "100vh", py: { xs: 5, md: 8 }, px: { xs: 2, md: 6 } }}>
-      <Box sx={{ maxWidth: 1000, mx: "auto" }}>
+      <Box sx={{ maxWidth: 1300, mx: "auto",mt: { xs: 4, md: 6 } }}>
         <Box sx={{ textAlign: "center" }}>
           <Typography variant="h4" component="h1" sx={{ color: "#1A2340", fontWeight: 700, fontSize: { xs: "1.5rem", md: "1.9rem" } }}>
             Code of Ethics
