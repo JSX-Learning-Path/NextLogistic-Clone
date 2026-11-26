@@ -1,9 +1,10 @@
 import { Box, Typography } from "@mui/material";
-import { faqItems } from "../data/faq";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+import { faqItems } from "../data/faq";
 import { faqIcons } from "../data/faqIcons";
 
 function CareerWithVision() {
@@ -11,9 +12,9 @@ function CareerWithVision() {
     <Box
       component="section"
       sx={{
+        width: "100%",
         minHeight: "100vh",
         backgroundColor: "#FFFFFF",
-        width: "100%",
         boxSizing: "border-box",
       }}
     >
@@ -23,15 +24,16 @@ function CareerWithVision() {
           width: "100%",
           margin: "0 auto",
           boxSizing: "border-box",
-          px: { xs: 2, md: 20 },
-          py: { xs: 2, md: 15 },
+          px: { xs: 2, md: 4 },
+          py: { xs: 6, md: 15 },
         }}
       >
+        {/* Section Header */}
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
-            gap: "16px",
+            gap: "12px",
             width: "100%",
           }}
         >
@@ -46,17 +48,19 @@ function CareerWithVision() {
           >
             A Career with a Vision for the future
           </Typography>
+
           <Box
             component="span"
             sx={{
-              width: "36px",
+              width: "38px",
               height: "2px",
-              flexShrink: 0,
               backgroundColor: "#2962FF",
             }}
-          ></Box>
+          />
         </Box>
-        <Box sx={{ mt: 3 }}>
+
+        {/* Title and Description */}
+        <Box sx={{ mt: 2 }}>
           <Typography
             component="h2"
             sx={{
@@ -66,12 +70,25 @@ function CareerWithVision() {
               color: "#111827",
             }}
           >
-            Culture, values and
-            <Box component="span" sx={{ color: "#2962FF", marginLeft: "10px" }}>
+            Culture, values and{" "}
+            <Box
+              component="span"
+              sx={{
+                color: "#2962FF",
+              }}
+            >
               opportunities to grow
             </Box>
           </Typography>
-          <Typography sx={{ mt: 2, color: "gray" }}>
+
+          <Typography
+            sx={{
+              mt: 2,
+              color: "#475569",
+              fontSize: "15px",
+              lineHeight: 1.7,
+            }}
+          >
             We're proud of our team. Every success is the result of the
             dedication, talent, and professionalism of the people who move the
             company forward. We strive to provide stability, support, and
@@ -79,7 +96,8 @@ function CareerWithVision() {
             and contribute to shared success.
           </Typography>
         </Box>
-        {/* Questions & Blue Section */}
+
+        {/* Questions & Benefits Section */}
         <Box
           sx={{
             display: "grid",
@@ -87,83 +105,145 @@ function CareerWithVision() {
               xs: "1fr",
               lg: "1.1fr 1fr",
             },
-            width: "100%",
-            gap: { xs: 3, lg: 5 },
-            alignItems: "stretch",
+            gap: { xs: 4, lg: 5 },
+            alignItems: "center",
             mt: 5,
-            height: "100%",
+            width: "100%",
           }}
         >
-          {/* Questions Section */}
+          {/* FAQ Section */}
           <Box
             sx={{
+              width: "100%",
               minWidth: 0,
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%",
               display: "flex",
               flexDirection: "column",
+              alignItems: "stretch",
             }}
           >
             {faqItems.map((faq) => (
               <Accordion
                 key={faq.id}
+                disableGutters
                 sx={{
+                  width: "100%",
                   backgroundColor: "#FFFFFF",
-                  "&::before": {
+                  borderRadius: 0,
+                  boxShadow: "none",
+                  borderBottom: "1px solid #DDE3F0",
+
+                  "&:before": {
                     display: "none",
                   },
-                  borderBottom: "1px solid #DDE3F0",
+
+                  "&.Mui-expanded": {
+                    margin: 0,
+                  },
                 }}
               >
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon sx={{ color: "#2962FF" }} />}
+                  expandIcon={
+                    <ExpandMoreIcon
+                      sx={{
+                        color: "#2962FF",
+                        fontSize: "22px",
+                      }}
+                    />
+                  }
+                  sx={{
+                    minHeight: "51px",
+                    px: 0,
+
+                    "&.Mui-expanded": {
+                      minHeight: "51px",
+                    },
+
+                    "& .MuiAccordionSummary-content": {
+                      my: 1.5,
+                    },
+
+                    "& .MuiAccordionSummary-content.Mui-expanded": {
+                      my: 1.5,
+                    },
+                  }}
                 >
-                  <Typography sx={{ fontSize: "14px" }}>
+                  <Typography
+                    sx={{
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      color: "#172033",
+                    }}
+                  >
                     {faq.questions}
                   </Typography>
                 </AccordionSummary>
-                <AccordionDetails>
-                  <Typography sx={{fontSize: "14px"}}>{faq.answer}</Typography>
+
+                <AccordionDetails
+                  sx={{
+                    px: 0,
+                    pt: 0,
+                    pb: 2,
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: "14px",
+                      lineHeight: 1.6,
+                      color: "#475569",
+                    }}
+                  >
+                    {faq.answer}
+                  </Typography>
                 </AccordionDetails>
               </Accordion>
             ))}
           </Box>
-          {/* Blue Section */}
+
+          {/* Blue Benefits Section */}
           <Box
             sx={{
-              minWidth: 0,
               width: "100%",
+              minWidth: 0,
               boxSizing: "border-box",
               backgroundColor: "#2962FF",
               borderRadius: "24px",
               display: "grid",
               gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-              gap: 2,
+              gridTemplateRows: "repeat(3, 1fr)",
+              gap: { xs: 1, md: 2 },
               p: { xs: 2, md: 3 },
               alignItems: "center",
               justifyItems: "center",
+              minHeight: { xs: "320px", md: "356px" },
             }}
           >
             {faqIcons.map((faqIcon) => (
               <Box
                 key={faqIcon.id}
                 sx={{
+                  width: "100%",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
-                  padding: "16px",
-                  borderRadius: "10px",
+                  gap: 1,
+                  padding: { xs: 1, md: 2 },
                   color: "#FFFFFF",
                   textAlign: "center",
                 }}
               >
-                <faqIcon.icon sx={{ fontSize: "36px", mb: 1 }} />
+                <faqIcon.icon
+                  sx={{
+                    fontSize: { xs: "26px", md: "30px" },
+                    mb: 0.5,
+                  }}
+                />
+
                 <Typography
                   sx={{
-                    fontSize: { xs: "15px", sm: "13px", md: "14px" },
-                    fontWeight: "bold",
+                    fontSize: { xs: "11px", sm: "13px", md: "14px" },
+                    fontWeight: 700,
+                    lineHeight: 1.4,
                   }}
                 >
                   {faqIcon.title}
